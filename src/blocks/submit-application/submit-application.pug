@@ -1,0 +1,11 @@
+section.submit-application
+  .submit-application__wrapper.container
+    .submit-application__title Давайте обсудим ваш проект
+    form
+      span.submit-application__text Оставьте заявку и мы перезвоним вам в течение 5 минут.
+      +inputCustom('project-decription', 'textarea', 'Опишите ваш проект').submit-application__textarea
+      +inputCustom('name', 'text', 'Имя').submit-application__input
+      +inputCustom('number', 'tel', 'Телефон').submit-application__input
+      +inputCustom('mebel-data', 'file', 'Файл').submit-application__input
+      span.submit-application__file-info Изображения, документы Word, PDF, Excel не более 10 Мб
+      +btn('Оставить заявку').submit-application__button

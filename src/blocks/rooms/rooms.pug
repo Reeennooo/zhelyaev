@@ -1,0 +1,68 @@
+-
+  let rooms = [
+    {
+      link: '/catalog-second.html',
+      roomName: 'Кухня',
+      specificNum: 28,
+      cost: 32990,
+      img: {
+        src: './img/rooms/kitchen.png',
+        alt: 'Мебель для кухни'
+      },
+      mod: ''
+    },
+    {
+      link: '/catalog-second.html',
+      roomName: 'Гостиная',
+      specificNum: 28,
+      cost: 19990,
+      img: {
+        src: './img/rooms/living-room.png',
+        alt: 'Мебель для гостинной'
+      },
+      mod: ''
+    },
+    {
+      link: '/catalog-second.html',
+      roomName: 'Спальня',
+      specificNum: 28,
+      cost: 51790,
+      img: {
+        src: './img/rooms/bedroom.png',
+        alt: 'Мебель для спальни'
+      },
+      mod: ''
+    },
+    {
+      link: '/catalog-second.html',
+      roomName: 'Прихожая',
+      specificNum: 72,
+      cost: 42810,
+      img: {
+        src: './img/rooms/hallway.png',
+        alt: 'Мебель для прихожей'
+      },
+      mod: 'large'
+    },
+    {
+      link: '/catalog-second.html',
+      roomName: 'Офис',
+      specificNum: 28,
+      cost: 30100,
+      img: {
+        src: './img/rooms/office.png',
+        alt: 'Мебель для офиса'
+      },
+      mod: ''
+    },
+  ]
+section.rooms
+ .container
+    h3.section-title Комнаты
+    .rooms__grid
+      each item in rooms
+        if(item.mod === 'large')
+          +room-card(item.link, item.roomName, item.specificNum, item.cost, item.img, item.mod).rooms__el.rooms__el--large
+        else
+          +room-card(item.link, item.roomName, item.specificNum, item.cost, item.img, item.mod).rooms__el
+        

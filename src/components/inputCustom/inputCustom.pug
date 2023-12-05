@@ -1,0 +1,15 @@
+mixin inputCustom(name, type, placeholder)
+  if (type === 'textarea')
+    .input-custom&attributes(attributes)
+      textarea(name=name, placeholder=placeholder)
+  else if(type === 'file')
+    .input-custom.input-custom--file
+      //- multiple
+      input(type=type, name=name, id=name multiple accept='image/png, image/jpeg, application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document').input-file
+      label(for=name)
+        svg
+          use(xlink:href='img/sprite.svg#paperclip')
+        | Прикрепить файл
+  else
+    .input-custom&attributes(attributes)
+      input(type=type, name=name, placeholder=placeholder)

@@ -1,0 +1,49 @@
+mixin product-characteristics(data)
+  .product-characteristics
+    .product-characteristics__title Характеристики
+    .product-characteristics__main
+        .product-characteristics__images
+          .product-characteristics__scheme-img
+            img(src="img/schemes/scheme1.png", alt="scheme")
+          .product-characteristics__scheme-img
+            img(src="img/schemes/scheme2.png", alt="scheme")
+        .product-characteristics__el.product-characteristics__el--sizes
+            span.product-characteristics__name Размеры:
+            <br>
+            span.product-characteristics__value
+              .product-characteristics__length
+                | Длина&nbsp; <br>
+                span 146
+                | &nbsp;см
+              span.product-characteristics__x x
+              .product-characteristics__width
+                | Ширина&nbsp; <br>
+                span 78
+                | &nbsp;см
+              span.product-characteristics__x x
+              .product-characteristics__heigth 
+                | Высота&nbsp; <br>
+                span 87
+                | &nbsp;см
+        .product-characteristics__el
+          span.product-characteristics__name Материалы корпуса:
+          span.product-characteristics__value  ЛДСП “Lamarty”
+        .product-characteristics__el
+          span.product-characteristics__name Материалы фасадов:
+          span.product-characteristics__value  ЛДСП “Lamarty”
+        .product-characteristics__el
+          span.product-characteristics__name Материалы столешницы:
+          span.product-characteristics__value  “Союз” 28мм. влагостойкая
+        .product-characteristics__el
+          span.product-characteristics__name Система открывания дверей:
+          span.product-characteristics__value  Петля “Unihopper” с доводчиком
+        .product-characteristics__el
+          span.product-characteristics__name Стеновая панель (фартук):
+          span.product-characteristics__value  Нет
+        .product-characteristics__el
+          span.product-characteristics__name Материал опор:
+          span.product-characteristics__value  Пластик
+    .product-characteristics__scheme
+      svg
+        use(xlink:href='img/sprite.svg#file-text')
+      a(href="#") Схема сборки Комод Сальвадор-2 Wood.pdf

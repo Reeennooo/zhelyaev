@@ -1,0 +1,10 @@
+mixin recommendation-card(data)
+  a(href="").recommendation-card&attributes(attributes)
+    .recommendation-card__img
+      img(src=data.src, alt="Мебель")
+    .recommendation-card__info
+      .recommendation-card__name=data.name
+      .recommendation-card__cost
+        span=data.cost
+        | &nbsp;₽
+    

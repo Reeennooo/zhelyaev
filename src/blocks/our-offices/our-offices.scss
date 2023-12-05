@@ -1,0 +1,152 @@
+.our-offices {
+  margin-bottom: 80px;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  &__warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey-light;
+
+    svg {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      fill: none;
+    }
+  }
+}
+
+.office-info {
+  max-width: 432px;
+  width: 100%;
+  min-height: 200px;
+  background-color: $background;
+  border-radius: 4px;
+  padding: 32px;
+
+  &__city {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    svg {
+      margin-right: 8px;
+    }
+
+    span {
+      font-family: $additional-font;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+
+  &__addres {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+
+  &__decor-line,
+  &__worktime {
+    color: $grey-light;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .our-offices {
+    &__wrapper {
+      flex-direction: column;
+      margin-bottom: 24px;
+    }
+
+    &__warning {
+      align-items: start;
+    }
+  }
+
+  .office-info {
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: $mobile-big) {
+  .our-offices {
+    margin-bottom: 60px;
+    &__wrapper {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+  }
+
+  .office-info {
+    &__city {
+      margin-bottom: 12px;
+      svg {
+        width: 38px;
+        height: 38px;
+      }
+      span {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+
+    &__addres {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .office-info {
+    padding: 32px 16px;
+    display: block;
+
+    &__contacts {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__worktime {
+      margin-bottom: 12px;
+    }
+
+    &__decor-line {
+      display: none;
+    }
+  }
+}

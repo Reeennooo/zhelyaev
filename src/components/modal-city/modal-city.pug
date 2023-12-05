@@ -1,0 +1,22 @@
+-
+  const cities = [
+    'Волчиха',
+    'Заринск',
+    'Змеигорск',
+    'Новоалтайск',
+    'Рубцовск',
+    'Алейск',
+    'Барнаул',
+    'Бийск',
+    'Благовещенка',
+    'Камень-на-Оби'
+  ]
+
+mixin modal-city()
+  +modal.modal-city
+    .modal-city__inner
+      .modal-city__title Укажите свой город
+      .modal-city__grid
+        each item in cities
+          .modal-city__el
+            span=item

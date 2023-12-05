@@ -1,0 +1,18 @@
+mixin modal-application()
+  +modal.modal-application
+    .modal-application__inner
+      span.modal-application__title Заявка на товар
+      .application-info
+        img(src="", alt="").application-info__img
+        .application-info__text
+          .application-info__product-name 
+          .application-info__product-cost
+            span 28 070
+            | &nbsp;₽
+      .modal-application__instruction Заполните форму для оформления заявки на товар, мы свяжемся с вами ближайшее время.
+      form(action="")
+        +inputCustom('name', 'text', 'Имя').input-first
+        +inputCustom('phone', 'tel', 'Телефон')
+        +inputCustom('product_id', 'text').hidden.for-id
+        +btn('Отправить заявку').modal-application__button
+

@@ -1,0 +1,19 @@
+//- Возможные модификации:
+//- small
+//- transparent 
+
+mixin btn(text, href, mods)
+  -
+    var allMods = ''
+    if(mods !== 'undefined' && mods) {
+    var modsList = mods.split(',');
+    for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ' + `btn--${modsList[i].trim()}`;
+      }
+    }
+
+  if(href)
+    a(href=href).btn(class=allMods)&attributes(attributes)=text
+  else
+    button.btn(class=allMods)&attributes(attributes)
+      span=text

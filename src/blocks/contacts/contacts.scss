@@ -1,0 +1,125 @@
+.contacts {
+  margin-bottom: 120px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 32px;
+  }
+}
+
+.contacts-card {
+  max-width: 432px;
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+  padding: 30px 20px;
+  border: 2px solid $white-f4;
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+  }
+
+  &__soc-btn {
+    background-color: $white-f4;
+  }
+
+  &__info {
+    span,
+    a {
+      // white-space: nowrap;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: $grey-light;
+    }
+
+    a {
+      @include transition('color');
+      @media (hover: hover) {
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+
+    span.contacts-card__subtitle {
+      display: block;
+      color: $black;
+      font-family: $additional-font;
+      font-weight: 600;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .contacts {
+    &__wrapper {
+      row-gap: 0;
+      flex-direction: column;
+    }
+  }
+
+  .contacts-card {
+    &:first-child {
+      padding: 32px 16px 12px;
+      border-bottom: none;
+      border-radius: 4px 4px 0px 0px;
+    }
+
+    &:nth-child(2) {
+      padding: 12px 16px 32px 16px;
+      border-top: none;
+      border-radius: 0px 0px 4px 4px;
+    }
+
+    &:last-child {
+      margin-top: 16px;
+      padding: 32px 16px;
+    }
+  }
+}
+
+@media (max-width: $mobile-big) {
+  .contacts {
+    margin-bottom: 74px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .contacts-card {
+    justify-content: flex-start;
+
+    &__info {
+      span,
+      a {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .contacts-card__subtitle {
+        font-weight: 600;
+      }
+    }
+
+    &:last-child {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      margin-top: 16px;
+      padding: 32px 16px;
+
+      .contacts-card__info {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

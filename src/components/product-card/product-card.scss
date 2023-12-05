@@ -1,0 +1,226 @@
+.product-card {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 289px;
+
+  @media (hover: hover) {
+    &:hover {
+      z-index: 1;
+      .product-card__wrapper {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      .product-card__tabs {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .product-card__hide {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      pointer-events: none;
+      left: -24px;
+      top: -24px;
+      right: -24px;
+      bottom: -24px;
+      background-color: $white;
+      border-radius: 4px;
+      border: 1px solid $white--2;
+      box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.14);
+      z-index: -1;
+      opacity: 0;
+      // @include transition('opacity');
+    }
+  }
+
+  &__main-info {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__gallery {
+    position: relative;
+    width: 100%;
+    height: 209px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      opacity: 0;
+
+      visibility: hidden;
+      pointer-events: none;
+      @include transition('visibility, opacity');
+      &.is-active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    &-el {
+      flex-basis: 1;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+
+  &__tabs {
+    position: absolute;
+    bottom: 8px;
+    // height: 20px;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    display: flex;
+    opacity: 0;
+    visibility: none;
+  }
+
+  &__tab {
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: $white--2;
+    @include transition('background-color');
+
+    &.is-active {
+      background-color: $grey-light;
+    }
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $additional-font;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__cost {
+    font-family: $additional-font;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__hide {
+    position: relative;
+    margin-top: 14px;
+    display: none;
+  }
+
+  &__sizes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  &__size-el {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $grey-light;
+
+    span {
+      color: $black;
+    }
+  }
+
+  .multiply {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $grey-light;
+  }
+
+  &__btn {
+    width: 100%;
+    position: relative;
+    z-index: 20;
+
+    &:first-of-type {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+// Отключение слайда фотографий на мобильном
+@media (max-width: $tablet) {
+  .product-card {
+    &__nav {
+      pointer-events: none;
+    }
+  }
+}
+
+@media (max-width: $mobile-big) {
+  .product-card {
+    &__name {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__cost {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (max-width: $mobile-sm) {
+  .product-card {
+    height: 200px;
+
+    &__gallery {
+      height: 108px;
+    }
+  }
+}

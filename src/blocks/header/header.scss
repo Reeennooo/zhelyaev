@@ -1,0 +1,196 @@
+.header {
+  position: relative;
+  background-color: $white;
+  padding: 32px 0;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    // margin-bottom: 28px;
+  }
+
+  &__logo {
+    position: relative;
+    top: -5px;
+    width: 146px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 68px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+
+    .header__link {
+      margin-right: 32px;
+    }
+  }
+
+  &__link,
+  .city {
+    position: relative;
+    display: block;
+    // white-space: nowrap;
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey-light;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $grey-light;
+      @include transition('width');
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
+    &.is-active {
+      color: $text-color;
+      &::before {
+        width: 100%;
+        background-color: $black;
+      }
+    }
+  }
+
+  .city {
+    @include transition('color');
+    &::before {
+      width: 100%;
+      background-color: $grey-light;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+
+    .city {
+      display: inline-block;
+    }
+    .city,
+    .header__link {
+      margin-right: 24px;
+    }
+
+    .number {
+      color: $green;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__categories {
+    width: auto;
+    display: flex;
+    align-items: center;
+    row-gap: 16px;
+    flex-wrap: wrap;
+
+    a {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      margin-right: 32px;
+      @include transition('color');
+
+      &.is-active {
+        color: $green;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop) {
+  .header {
+    &__top {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__logo {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .header {
+    &__top {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+    }
+
+    &__logo {
+      top: 0;
+      margin: 0;
+    }
+
+    &__nav {
+      width: auto;
+    }
+
+    &__contacts {
+      .city,
+      .header__link {
+        display: none;
+      }
+    }
+
+    .header__actions .header__link,
+    &__categories {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $mobile-big) {
+  .header {
+    padding: 16px 0;
+    &__logo {
+      width: 107px;
+      height: 30px;
+    }
+  }
+}

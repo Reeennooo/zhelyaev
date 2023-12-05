@@ -1,0 +1,42 @@
+section.product(data-id='product-111' data-img='https://cdn.kanobu.ru/articles/pics/7b22cfa6-9aff-4dd1-9790-9680f01fc0e7.webp')
+  .container.product__wrapper
+    .product__info-wp
+      +product-gallery()
+      p.product__desk
+        | Серия Монблан – это системы хранения в различных цветовых решениях. Каждый предмет мебели детально продуман – от дизайна до внутреннего наполнения. Благодаря<br> сдержанным оттенкам и классическому рисунку на фасаде, Монблан подходит любой обстановке.
+      +product-characteristics()
+
+
+    .product__dashboard-wp
+      .product-dashboard 
+        span.product-dashboard__name Комод Сальвадор-2 Wood
+        .product-dashboard__cost
+          span 28 070
+          | &nbsp;₽
+        +btn('Отправить заявку', '#')(data-modal='modal-application').product-dashboard__send-request
+        .product-dashboard__info
+          .product-dashboard__making
+            svg
+              use(xlink:href="img/sprite.svg#clock")
+            p 
+              | Срок изготовления - 
+              span.product-dashboard__making-time 60 дней
+          .product-dashboard__buttons
+            button.info-button#characteristics
+              .info-button__inner
+                svg
+                  use(xlink:href="img/sprite.svg#crop")
+                span Характеристики
+              <svg width="20" height="20" viewBox="0 0 21 20" class='caret' fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 3.75L14.25 10L8 16.25" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            .decor-line
+            button.info-button(data-modal='modal-delivery')
+              .info-button__inner
+                svg
+                  use(xlink:href="img/sprite.svg#truck")
+                span Условия доставки
+              <svg width="20" height="20" viewBox="0 0 21 20" class='caret' fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 3.75L14.25 10L8 16.25" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              

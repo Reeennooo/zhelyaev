@@ -1,0 +1,9 @@
+mixin banner(title, text, button, cover)
+  .banner&attributes(attributes)
+    img(src=cover, alt="Мебель inteko").banner__cover
+    .banner__info
+      h3.banner__title=title
+      .banner__text
+        each item in text
+          p.banner__paragraph!=item
+      +btn(button.textBtn, button.href).banner__btn

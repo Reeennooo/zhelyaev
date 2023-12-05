@@ -1,0 +1,108 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 432px;
+  width: 100%;
+
+  &__list {
+    max-width: 328px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    list-style: none;
+  }
+
+  &__item {
+    pointer-events: none;
+    a {
+      pointer-events: auto;
+      display: block;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      border-radius: 50%;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      @include transition('background-color');
+    }
+
+    &.is-active {
+      a {
+        background-color: #f2f5f1;
+      }
+    }
+
+    @media (hover: hover) {
+      &:not(.pagination__item--dots):hover {
+        a {
+          background-color: #f2f5f1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__prev-btn,
+  &__next-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include transition('background-color');
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: $grey-light;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #f2f5f1;
+      }
+    }
+  }
+
+  &__next-btn {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .pagination {
+    max-width: 325px;
+    &__prev-btn,
+    &__next-btn {
+      width: 38px;
+      height: 38px;
+    }
+
+    &__item {
+      a {
+        width: 38px;
+        height: 38px;
+      }
+
+      &--hidden {
+        display: none;
+      }
+    }
+
+    &__list {
+      max-width: 222px;
+    }
+  }
+}

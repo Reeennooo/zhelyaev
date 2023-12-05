@@ -1,0 +1,126 @@
+.purchase-options {
+  padding-bottom: 80px;
+}
+
+.purchase-options__ready {
+  margin-bottom: 32px;
+  .banner__cover {
+    width: 826px;
+    height: 672px;
+    right: -210px;
+    top: -150px;
+  }
+
+  .banner__paragraph {
+    white-space: normal;
+  }
+}
+
+.purchase-options__individ {
+  .banner__cover {
+    // top: 0;
+    // left: 0;
+    // z-index: 0;
+    // pointer-events: none;
+    // width: 100%;
+    // height: 100%;
+    // object-fit: cover;
+
+    max-width: none;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 0;
+    width: 1450px;
+    height: 598px;
+    top: -26px;
+    left: 0;
+  }
+}
+
+@media (max-width: $desktop) {
+  .purchase-options__ready {
+    .banner__cover {
+      width: 600px;
+      height: 446px;
+      right: -210px;
+      top: -50px;
+    }
+    margin-bottom: 32px;
+  }
+
+  .purchase-options__individ {
+    .banner__cover {
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .purchase-options__ready {
+    .banner__cover {
+      right: -310px;
+      top: -50px;
+    }
+  }
+}
+
+@media (max-width: $mobile-big) {
+  .purchase-options {
+    padding-bottom: 74px;
+  }
+  .purchase-options__ready {
+    .banner__cover {
+      width: 244px;
+      height: 221px;
+      right: auto;
+      left: 50%;
+      top: 39px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .purchase-options__individ {
+    background-image: url(../img/chairs-rotate.jpg);
+    background-position: 0 -265px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    .banner__cover {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .purchase-options__ready {
+    margin-bottom: 16px;
+  }
+
+  .purchase-options__individ {
+    background-position: 0 -200px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    .banner__cover {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .purchase-options__individ {
+    background-position: -60px -240px;
+    background-size: 150%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 375px) {
+  .purchase-options__individ {
+    background-position: -60px -190px;
+    background-size: 150%;
+    background-repeat: no-repeat;
+  }
+}

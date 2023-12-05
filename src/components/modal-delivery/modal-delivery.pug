@@ -1,0 +1,9 @@
+mixin modal-delivery()
+  +modal().modal-delivery
+    .modal-delivery__inner
+      .modal-delivery__title Доставка
+      .modal-delivery__text
+        | Мы осуществляем доставку по всей России. Также, в случае необходимости, вы можете забрать свой заказ в пункте самовывоза. 
+        <br>
+        span Подробные условия всегда можно уточнить у наших<br> менеджеров.
+      +btn('Контакты', '/contacts.html', 'small').modal-delivery__btn

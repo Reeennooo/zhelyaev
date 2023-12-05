@@ -1,0 +1,11 @@
+mixin modal()
+    //- Вызов:
+        +modal().modal-images
+            p some blocks
+    .i-modal.is-default-hidden&attributes(attributes)
+        .i-modal__content
+            .i-modal__close(data-modal-close)
+                svg
+                    use(xlink:href='img/sprite.svg#x')
+            .i-modal__inner
+                block

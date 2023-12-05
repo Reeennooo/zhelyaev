@@ -1,0 +1,10 @@
+mixin catalog-card(img, name, links, inDepth, mod)
+  .catalog-card( class=`${mod ? `catalog-card--${mod}` : ''}` )&attributes(attributes)
+    a(href=inDepth).catalog-card__img
+      img(src=img.src, alt=img.alt)
+    a(href=inDepth).catalog-card__name=name
+    .catalog-card__nav
+      each link in links
+        a(href=link.href).catalog-card__nav-el=link.text
+
+        

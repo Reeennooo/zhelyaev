@@ -1,0 +1,52 @@
+mixin search(icon, placeText)
+  .search
+    .search__wrapper
+      .search-input
+        input(type="text" placeholder='Поиск' id='search')
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+          <path d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16.4431 16.4434L20.9995 20.9997" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      .search__btn-wp
+        +btn('Найти', '', 'small').search__btn
+        +circle-btn({src: 'img/icons/cross-grey.svg', alt: 'x'}).search__close
+    .search__categories
+      each item in categories
+        a(href=item.link)=item.text
+    //- .search-noresults
+    //-   | По запросу “<span class='search-noresults__query'>фыввыфройцу</span>” <br>ничего не найдено
+    //- .often-looking - добавить этот к search-result, если нужно вывести то что Часто Ищут
+    .search-result
+      span.search-result__title Часто ищут
+      .search-result__often-looking
+        a(href="#") <b>Модул</b>ьные гостиные
+        a(href="#") Стеллажи
+        a(href="#") Тумбы под телевизор
+        a(href="#") Стенки
+        a(href="#") <b>Модул</b>ьные гостиные
+        a(href="#") Стеллажи
+        a(href="#") Тумбы под телевизор
+        a(href="#") Стенки
+      //- .search-result__wrapper
+      //-   a(href="#") <b>Модул</b>ьные гостиные
+      //-   a(href="#") Стеллажи
+      //-   a(href="#") Тумбы под телевизор
+      //-   a(href="#") Стенки
+      //-   a(href="#") <b>Модул</b>ьные гостиные
+      //-   a(href="#") Стеллажи
+      //-   a(href="#") Тумбы под телевизор
+      //-   a(href="#") Стенки
+      //-   a(href="#") <b>Модул</b>ьные гостиные
+      //-   a(href="#") Стеллажи
+      //-   a(href="#") Тумбы под телевизор
+      //-   a(href="#") Стенки
+      //-   a(href="#") <b>Модул</b>ьные гостиные
+      //-   a(href="#") Стеллажи
+      //-   a(href="#") Тумбы под телевизор
+      //-   a(href="#") ЫЫЫЫЫЫЫЫ
+
+
+
+
+
+

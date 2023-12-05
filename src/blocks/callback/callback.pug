@@ -1,0 +1,14 @@
+section.callback
+  img(src="./img/callback-cover.jpg", alt="inteko мебель").callback__cover
+  .callback__wrapper
+    .callback__form
+      h3.callback__title Поможем выбрать
+      span.callback__subtitle Оставьте заявку и мы перезвоним вам в течение 5 минут.
+      form
+        +inputCustom('name', 'text', 'Имя').callback__input
+        +inputCustom('Телефон', 'tel', 'Телефон').callback__input
+        +btn('Оставить заявку', '', 'small').callback__button
+      span.callback__call 
+        | Или позвоните нам прямо сейчас:&nbsp;
+        br
+        a(href="tel: +88003502237") 8 800 350 22 37

@@ -1,0 +1,14 @@
+mixin product-gallery()
+  .product-gallery
+    .product-gallery__desktop
+      .product-gallery__large
+        img(src="./img/products/image.png", alt="").product-gallery__photo
+        img(src="./img/products/image-1.png", alt="").product-gallery__photo
+      .product-gallery__small
+        img(src="./img/products/image-2.png", alt="").product-gallery__photo
+        img(src="./img/products/image-3.png", alt="").product-gallery__photo
+        img(src="./img/products/image-3.png", alt="").product-gallery__photo.product-gallery__photo--hidden
+        img(src="./img/products/image-3.png", alt="").product-gallery__photo.product-gallery__photo--hidden
+        img(src="./img/products/image-3.png", alt="").product-gallery__photo.product-gallery__photo--hidden
+      .product-gallery__for-button
+        +btn('Все фото', '', 'small, transparent').product-gallery__button.is-active

@@ -1,0 +1,36 @@
+-
+  let heroSlides = [
+    {
+      title: 'Современные \nкухни для жизни',
+      subtitle: 'Проект мечты под заказ',
+      btntext: 'Оставить заявку',
+      img: './img/hero-slider/slide1.jpg'
+    },
+    {
+      title: 'Экологичные \nматериалы',
+      subtitle: 'Проект мечты под заказ',
+      btntext: 'Оставить заявку',
+      img: './img/hero-slider/slide1.jpg'
+    },
+  ]
+
+section.hero
+  .swiper.hero-slider
+    .swiper-wrapper
+      each slide in heroSlides 
+        .swiper-slide.hero-slide
+          img(src=slide.img, alt="Современный интерьер")
+          .hero-slide__info
+            .hero-slide__text
+              span.hero-slide__title=slide.title
+              span.hero-slide__subtitle=slide.subtitle
+            +btn(`${slide.btntext}`).hero-slide__btn
+  button.hero__button-prev
+    svg
+      use(xlink:href="img/sprite.svg#caret-right")
+  button.hero__button-next
+    svg
+      use(xlink:href="img/sprite.svg#caret-right")
+  .hero-slider__pagination.slider-pagination
+
+    

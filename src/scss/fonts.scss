@@ -1,0 +1,39 @@
+@mixin fontRuble($f-name, $f-style, $f-weight, $f-url) {
+  @font-face {
+    font-family: $f-name;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    src: url('../fonts/#{$f-url}.ttf') format('truetype');
+  }
+}
+@mixin font($f-name, $f-style, $f-weight, $f-url) {
+  @font-face {
+    font-family: $f-name;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    src: url('../fonts/#{$f-url}.woff2') format('woff2'), url('../fonts/#{$f-url}.woff') format('woff'), url('../fonts/#{$f-url}.ttf') format('truetype'), url('../fonts/#{$f-url}.eot'), url('../fonts/#{$f-url}.eot?#iefix') format('embedded-opentype');
+  }
+}
+
+@mixin fontTTF($f-name, $f-style, $f-weight, $f-url) {
+  @font-face {
+    font-family: $f-name;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    src: url('../fonts/#{$f-url}.ttf') format('truetype');
+  }
+}
+
+// Monteserrat
+@include font('Montserrat', normal, 400, 'montserrat/montserrat-v14-latin_cyrillic-regular');
+@include font('Montserrat', normal, 500, 'montserrat/montserrat-v14-cyrillic_latin-500');
+@include font('Montserrat', normal, 700, 'montserrat/montserrat-v14-latin_cyrillic-700');
+@include font('Montserrat', normal, 800, 'montserrat/montserrat-v14-latin_cyrillic-800');
+@include font('Montserrat', italic, 400, 'montserrat/montserrat-v15-latin-ext_latin_cyrillic-ext_cyrillic-italic');
+@include font('Montserrat', italic, 900, 'montserrat/montserrat-v14-cyrillic_latin-900italic');
+
+// Manrope
+@include fontTTF('Manrope', normal, 400, 'manrope/Manrope-Regular');
+@include fontTTF('Manrope', normal, 500, 'manrope/Manrope-Medium');
+@include fontTTF('Manrope', normal, 600, 'manrope/Manrope-SemiBold');
+@include fontTTF('Manrope', normal, 700, 'manrope/Manrope-Bold');

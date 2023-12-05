@@ -1,0 +1,112 @@
+.recommendation {
+  padding-bottom: 120px;
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    display: inline-block;
+
+    font-family: $additional-font;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.recommendation-pagination {
+  margin-top: 48px;
+  width: 100%;
+  display: flex;
+
+  &__bullet {
+    display: block;
+    height: 1px;
+    flex-grow: 1;
+    background-color: #f3f3f3;
+
+    &--active {
+      background-color: $grey;
+    }
+  }
+}
+
+.recommendation-navigation {
+  max-width: 108px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__button-prev,
+  &__button-next {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid $grey-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include transition('background-color');
+
+    svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: $grey-light;
+      pointer-events: none;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.14);
+    }
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+  }
+
+  &__button-prev {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: $mobile-big) {
+  .recommendation {
+    padding-bottom: 74px;
+
+    &__top {
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 34px;
+    }
+  }
+
+  .recommendation-navigation {
+    display: none;
+  }
+  .recommendation-pagination {
+    margin-top: 44px;
+  }
+}

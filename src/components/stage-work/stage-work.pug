@@ -1,0 +1,9 @@
+mixin stage-work(number, title, text)
+  .stage-work
+    .stage-work__num=number
+      |.
+    .stage-work__title
+      img(src=title.icon, alt="Мебель под заказ").stage-work__icon
+      span=title.txt
+    span.stage-work__text!=text
+      

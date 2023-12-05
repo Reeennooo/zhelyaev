@@ -1,0 +1,62 @@
+-
+  const recommendCards = [
+    {
+      name: 'Комод Монблан-4 Аквамарин',
+      src: '../img/recommendations/image1.png',
+      cost: 36990
+    },
+    {
+      name: 'Комод Монблан-4 Сантьяго',
+      src: '../img/recommendations/image2.png',
+      cost: 32990
+    },
+    {
+      name: 'Комод Теджонс-4 Time-2 Art Aquamarine',
+      src: '../img/recommendations/image3.png',
+      cost: 42990
+    },
+    {
+      name: 'Комод Монблан-4 Милк',
+      src: '../img/recommendations/image3.png',
+      cost: 30990
+    },
+     {
+      name: 'Комод Монблан-4 Милк',
+      src: '../img/recommendations/image3.png',
+      cost: 30990
+    },
+     {
+      name: 'Комод Монблан-4 Милк',
+      src: '../img/recommendations/image3.png',
+      cost: 30990
+    },
+     {
+      name: 'Комод Монблан-4 Милк',
+      src: '../img/recommendations/image3.png',
+      cost: 30990
+    },
+
+     {
+      name: 'Комод Монблан-4 Милк',
+      src: '../img/recommendations/image3.png',
+      cost: 30990
+    },
+   
+  ]
+section.recommendation
+  .container.recommendation__wrapper
+    .recommendation__top 
+      h3.recommendation__title Похожие Комоды
+      .recommendation-navigation
+        .recommendation-navigation__button-prev
+          svg
+            use(xlink:href='img/sprite.svg#caret-right')
+        .recommendation-navigation__button-next
+          svg
+            use(xlink:href='img/sprite.svg#caret-right')
+    //- +recommendation-card(recommendCards[0])
+    .swiper.recommendation-slider
+      .swiper-wrapper
+        each card in recommendCards
+          +recommendation-card(card).swiper-slide.recommendation-slide
+    .recommendation-pagination

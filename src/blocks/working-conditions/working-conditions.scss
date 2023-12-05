@@ -1,0 +1,147 @@
+.working-conditions {
+  padding-bottom: 80px;
+  &__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 32px;
+  }
+
+  &__wrapper {
+    display: flex;
+    column-gap: 32px;
+  }
+}
+
+.conditions-card {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: $white-f4;
+  border-radius: 4px;
+  padding: 44px;
+  padding-right: 210px;
+
+  &__text {
+    max-width: 400px;
+  }
+
+  &__title {
+    font-family: $additional-font;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__decor {
+    width: 303px;
+    height: 303px;
+    border-radius: 100%;
+    background-color: $green;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -65px;
+    z-index: 0;
+  }
+}
+
+.conditions-card__decor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 108px;
+    height: 108px;
+    color: #c0ff23;
+    &.stroke {
+      fill: none;
+      stroke: #c0ff23;
+    }
+  }
+}
+
+@media (max-width: $desktop) {
+  .conditions-card {
+    padding-right: 160px;
+    &__decor {
+      right: -150px;
+      justify-content: flex-start;
+      padding-left: 30px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .working-conditions {
+    &__wrapper {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+  }
+  .conditions-card {
+    padding-right: 235px;
+    &__decor {
+      right: -65px;
+      justify-content: center;
+      padding-left: 0;
+    }
+  }
+}
+
+@media (max-width: $mobile-big) {
+  .working-conditions {
+    padding-bottom: 60px;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    svg {
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      bottom: 49px;
+      left: 57px;
+    }
+  }
+
+  .conditions-card {
+    padding: 32px 16px;
+
+    &__decor {
+      transform: translateY(0);
+      width: 292px;
+      height: 292px;
+      right: -calc(292px / 2);
+      top: -calc(292px / 2);
+      justify-content: center;
+      padding-left: 0;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .conditions-card {
+    padding: 32px 16px;
+    padding-top: 146px;
+
+    &__text {
+      max-width: none;
+    }
+
+    &__subtitle {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}

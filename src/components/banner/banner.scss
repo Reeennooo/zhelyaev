@@ -1,0 +1,118 @@
+.banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 100px;
+  border-radius: 4px;
+  background-color: $white-f4;
+
+  &__info {
+    position: relative;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-family: $additional-font;
+  }
+
+  &__cover {
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &__title {
+    font-size: 48px;
+    line-height: 54px;
+    letter-spacing: -0.02em;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    max-width: 430px;
+  }
+
+  &__paragraph {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+
+    br.mobile {
+      display: none;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    width: 288px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .banner {
+    padding: 50px;
+    &__title {
+      font-size: 44px;
+    }
+  }
+}
+
+@media (max-width: $mobile-big) {
+  .banner {
+    padding: 50px;
+    padding-top: 272px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      font-size: 30px;
+      line-height: 34px;
+      margin-bottom: 32px;
+    }
+
+    &__text {
+      margin-bottom: 32px;
+    }
+
+    &__paragraph {
+      br.desktop {
+        display: none;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .banner {
+    padding: 16px 16px 32px;
+    padding-top: 272px;
+  }
+}
+
+@media (max-width: 375px) {
+  .banner {
+    &__paragraph {
+      br.mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .banner {
+    &__paragraph {
+      br.mobile {
+        display: none;
+      }
+    }
+  }
+}

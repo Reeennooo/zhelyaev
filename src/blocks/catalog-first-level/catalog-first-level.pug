@@ -1,0 +1,79 @@
+-
+  let catalogCards = [
+    {
+      name: 'Кухня',
+      img: {
+        src: './img/rooms/kitchen.png',
+        alt: 'Каталог мебели для кухни'
+      },
+      links: [
+        {text: 'Прямые', href: '#'}, 
+        {text: 'Угловые', href: '#'}, 
+        {text: 'Островные', href: '#'}],
+      inDepth: 'catalog-second.html'
+    },
+    {
+      name: 'Гостиная',
+      img: {
+        src: './img/rooms/living-room.png',
+        alt: 'Каталог мебели для кухни'
+      },
+      links: [
+        {text: 'Стенки', href: '#'}, 
+        {text: 'Модульные гостинные', href: '#'}, 
+        {text: 'Стелажи', href: '#'}, 
+        {text: 'Тумбы под телевизор', href: '#'}
+        ],
+      inDepth: 'catalog-second.html'
+    },
+    {
+      name: 'Спальня',
+      img: {
+        src: './img/rooms/bedroom.png',
+        alt: 'Каталог мебели для кухни'
+      },
+      links: [
+        {text: 'Модульная спальня', href: '#'}, 
+        {text: 'Гардеробные', href: '#'}, 
+        {text: 'Шкафы', href: '#'}],
+      inDepth: 'catalog-second.html'
+    },
+    {
+      name: 'Прихожая',
+      img: {
+        src: './img/rooms/hallway.png',
+        alt: 'Каталог мебели для кухни'
+      },
+      links: [
+        {text: 'Модульные прихожие', href: '#'}, 
+        {text: 'Шкафы купе', href: '#'}, 
+        {text: 'Комоды', href: '#'}, 
+        {text: 'Зеркала', href: '#'}],
+        mod: 'large',
+        inDepth: 'catalog-second.html'
+    },
+    {
+      name: 'Офис',
+      img: {
+        src: './img/rooms/office.png',
+        alt: 'Каталог мебели для кухни'
+      },
+      links: [
+        {text: 'Стол руководителя', href: '#'}, 
+        {text: 'Столы для переговоров', href: '#'}, 
+        {text: 'Эргономичные столы', href: '#'}, 
+        {text: 'Рабочий стол', href: '#'}
+      ],
+      inDepth: 'catalog-second.html'
+    },
+  ]
+
+section.catalog-first-level
+  .container
+    h3.section-title Каталог
+    .catalog-first-level__grid#catalog
+      each card in catalogCards
+        if(card.mod)
+          +catalog-card(card.img, card.name, card.links, card.inDepth, card.mod).catalog-first-level__card.catalog-first-level__card-large
+        else
+          +catalog-card(card.img, card.name, card.links, card.inDepth).catalog-first-level__card

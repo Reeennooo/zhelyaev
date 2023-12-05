@@ -1,0 +1,33 @@
+// Widths   420 479 575 640 767 991 1199 1400
+$mobile-sm: 479px;
+$mobile: 575px;
+$mobile-big: 767px;
+$tablet: 991px;
+$desktop: 1199px;
+$desktop-big: 1440px;
+
+$grid-spacing: 40px;
+$grid-spacing-sm: 16px;
+
+$base-img: '../img/';
+
+$font-size: 16px;
+$line-height: 1.5;
+// Fonts
+$default-font: 'Montserrat', sans-serif; //400/700
+$additional-font: 'Manrope', sans-serif; //400/700/800
+
+// Colors
+$text-color: #000;
+$color-error: #e60000;
+$black: #000;
+$white: #ffffff;
+$white-f4: #f4f3f1;
+$white--2: #e2e2e2;
+$background: #f4f4f4;
+$grey-dark: #404040;
+$grey: #666666;
+$grey-light: #989898;
+
+$green: #299a00;
+$olive: #8fb138;

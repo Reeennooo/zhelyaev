@@ -1,0 +1,43 @@
+-
+  let footerItems = [
+    {
+      type: 'link',
+      icon: 'book',
+      text: 'Каталог',
+      link: '/catalog-first.html'
+    },
+    {
+      type: 'link',
+      icon: 'notePencil',
+      text: 'Под заказ',
+      link: '/individual-design.html'
+    },
+    {
+      id: 'mobile-search',
+      type: 'button',
+      icon: 'magnifyingGlass',
+      text: 'Поиск',
+    },
+    {
+      type: 'link',
+      icon: 'phone',
+      text: 'Контакты',
+      link: '/contacts.html'
+    }
+  ]
+
+.footer-mob
+  .footer-mob__container
+    each item in footerItems
+      if(item.type === 'link') 
+        a(href=item.link).footer-mob__item
+          svg(width="24", height="24")
+            use(xlink:href=`img/sprite.svg#${item.icon}`)
+          span=item.text
+      else
+        button.footer-mob__item.footer-mob__item--button(id=item.id)
+          svg(width="24", height="24")
+            use(xlink:href=`img/sprite.svg#${item.icon}`)
+          span=item.text
+       
+      

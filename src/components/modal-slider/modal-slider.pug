@@ -1,0 +1,14 @@
+mixin modal-slider()
+  .modal-slider
+    .modal-slider__wrapper
+      +circle-btn({src: 'img/icons/cross-grey.svg', alt: 'x'}).modal-slider__close
+      .modal-slider__image-column
+        .modal-slider__pagination
+      .modal-slider__swiper.swiper
+        .swiper-wrapper
+        button.modal-slider__button-prev
+          svg
+            use(xlink:href="img/sprite.svg#caret-right")
+        button.modal-slider__button-next
+          svg
+            use(xlink:href="img/sprite.svg#caret-right")

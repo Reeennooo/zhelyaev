@@ -1,0 +1,34 @@
+-
+  let banners = [
+    {
+      title: 'Готовые решения ',
+      text: [
+        `Готовые решения предоставляют вам<br class='mobile'> большой выбор<br class='desktop'> стильных и современных<br class='mobile'> дизайнов для комфорта в<br class='desktop'>  вашем доме.<br class='mobile'> Каждое решение кропотливо совмещает<br class='desktop'><br class='mobile'> свою идею и качественное исполнение,<br class='mobile'> гармонично<br class='desktop'> встраиваемое в желаемое вами<br class='mobile'> пространство.`,
+        `Имеется полная документация и готовый<br class='mobile'> типовой<br class='desktop'> проект для каждого решения.`],
+      button: {
+        textBtn: 'Каталог',
+        href: '#'
+      },
+      cover: './img/commod.png',
+      mod: 'ready'
+    },
+    {
+      title: 'Индивидуальный дизайн ',
+      text: [
+          `Индивидуальное проектирование мебели позволяет создать<br class='desktop'> именно ту атмосферу, которая нужна конкретно вам. Проект,<br class='desktop'> в котором учетны все нюансы, сделаны<br class='mobile'> точные расчеты.`,
+          `Имеется полная документация, включая архитектурный и<br class='desktop'> конструктивный планы, а так же смета по всем материалам.`],
+      button: {
+        textBtn: 'Под заказ',
+        href: '#'
+      },
+      cover: './img/chairs-min.jpg',
+      mod: 'individual'
+    },
+  ]
+section.purchase-options
+  .container
+    each item in banners
+      if (item.mod === 'individual')
+        +banner(item.title, item.text, item.button, item.cover).purchase-options__individ
+      else if(item.mod === 'ready') 
+        +banner(item.title, item.text, item.button, item.cover).purchase-options__ready

@@ -1,0 +1,96 @@
+.input-custom {
+  display: block;
+  position: relative;
+
+  input,
+  textarea {
+    width: 100%;
+    height: 100%;
+    padding: 13px 16px;
+    background-color: transparent;
+    font-family: $default-font;
+    font-size: 16px;
+    line-height: 20px;
+    border: 1px solid $grey-light;
+    border-radius: 4px;
+    @include transition(border shadow);
+
+    &::placeholder {
+      font-family: $default-font;
+      color: $grey-light;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      @include transition(border color shadow);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.05rem rgba(0, 0, 0, 1);
+      border-color: $black;
+    }
+
+    @media (hover: hover) {
+      &:not(:focus):hover {
+        border-color: $grey;
+
+        &::placeholder {
+          color: $grey;
+        }
+      }
+    }
+  }
+
+  textarea {
+    display: block;
+    resize: none;
+    padding: 18px 16px;
+  }
+
+  &--file {
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $black;
+      border-radius: 100px;
+      padding: 5px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 10px;
+      cursor: pointer;
+      @include transition('background-color');
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: rgba($color: #989898, $alpha: 0.08);
+        }
+      }
+
+      &:active {
+        background-color: rgba($color: #989898, $alpha: 0.14);
+      }
+
+      &.disabled {
+        pointer-events: none;
+        opacity: 0.3;
+      }
+    }
+
+    input {
+      position: absolute;
+      visibility: none;
+      pointer-events: none;
+      // display: none;
+      opacity: 0;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: $black;
+      margin-right: 8px;
+    }
+  }
+}

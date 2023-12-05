@@ -1,0 +1,25 @@
+mixin breadcrumbs(path)
+  .breadcrumbs.container
+    ul.breadcrumbs__ul
+      li.breadcrumbs__item
+        a(href="/") Главная
+      li.breadcrumbs__item
+        a(href="/") Главная
+      li.breadcrumbs__item
+        a(href="/") Главная
+      li.breadcrumbs__item
+        a(href="/") Главная
+      li.breadcrumbs__item
+        a(href="/") Главная
+      li.breadcrumbs__item
+        a(href="/") Главная
+      li.breadcrumbs__item
+        a(href="/") Главная
+      li.breadcrumbs__item
+        a(href="/") Главная
+      each item in path
+        li.breadcrumbs__item
+          if(item.href)
+            a(href=item.href)=item.text
+          else
+            span=item.text

@@ -1,0 +1,64 @@
+.type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        stroke: $grey;
+      }
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    stroke: $grey-light;
+    margin-bottom: 8px;
+
+    img {
+      @include transition('background');
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        img {
+          background-color: $white-f4;
+        }
+      }
+    }
+  }
+
+  &__name {
+    font-family: $additional-font;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__count {
+    font-size: 12px;
+    line-height: 15px;
+    vertical-align: super;
+    margin-left: 4px;
+    color: $grey-light;
+  }
+}
+
+@media (max-width: $tablet) {
+  .type-card {
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+
+    &__name {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.modal-delivery {
+  &__title {
+    font-family: $additional-font;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 32px;
+    span {
+      color: $grey-light;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    max-width: 258px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: $grey-dark;
+  }
+}
+
+@media (max-width: $mobile-big) {
+  .modal-delivery {
+    &__title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 24px;
+
+      span {
+        br {
+          display: none;
+        }
+      }
+    }
+
+    &__btn {
+      max-width: none;
+    }
+  }
+}

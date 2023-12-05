@@ -1,0 +1,24 @@
+extends ../pug/layout.pug
+
+block meta
+    title Каталог
+    meta(name='description', content='')
+
+//-block append head
+   link(rel='stylesheet', href='css/some.css')
+
+//-block header
+
+block content
+    +breadcrumbs([{text: "Каталог"}])
+    include ../blocks/furniture-types/furniture-types
+    include ../blocks/catalog-second-level/catalog-second-level
+    include ../blocks/footer-mob/footer-mob
+//- block footer
+    
+
+block prepend page-bottom
+    +modal-city()
+    +modal-application()
+//- block append page-bottom
+//-   script(src='js/some.js')

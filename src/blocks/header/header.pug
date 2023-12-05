@@ -1,0 +1,42 @@
+-
+    let categories = [
+        {
+            text: 'Кухни',
+            link: '#'
+        },
+        {
+            text: 'Прихожая',
+            link: '#'
+        },
+        {
+            text: 'Гостиная',
+            link: '#'
+        },
+        {
+            text: 'Спальни',
+            link: '#'
+        },
+        {
+            text: 'Офисная мебель',
+            link: '#'
+        },
+    ]
+
+header.header
+    .container
+        .header__top
+            a(href='index.html').header__logo
+                <img src='./img/logo.svg' alt='logo'>
+            .header__nav
+                .header__actions
+                    a(href='catalog-first.html').header__link.is-active Каталог
+                    a(href='individual-design.html').header__link Под заказ
+                    +search()
+                .header__contacts
+                    .city(data-modal='modal-city') Барнаул
+                    a(href='/contacts.html').header__link  Контакты
+                    a(href='tel:+88003502237').number  8 800 350 22 37
+        .header__categories
+            each item in categories
+                a(href=item.link)=item.text
+            

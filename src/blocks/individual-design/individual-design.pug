@@ -1,0 +1,44 @@
+-
+  const stages = [
+    {
+      number: 1,
+      title: {
+        icon: './img/icons/note-pencil.svg',
+        txt: 'Разработка'
+      },
+      text: 'Если нет времени разбираться в материалах или возникли сложности мы поможем с дизайном и предложим лучшие варианты.'
+    },
+    {
+      number: 2,
+      title: {
+        icon: './img/icons/buildings.svg',
+        txt: 'Изготовление'
+      },
+      text: 'Срок производства составляет от 7 до 35дней в зависимости от вашего объема заказа. Сроки могут сдвигаться в зависимостиот сложности проекта.'
+    },
+    {
+      number: 3,
+      title: {
+        icon: './img/icons/truck.svg',
+        txt: 'Доставка'
+      },
+      text: 'У нас нет выходных, поэтому доставка осуществляетсяв удобное для Вас время.'
+    },
+    {
+      number: 4,
+      title: {
+        icon: './img/icons/wrench.svg',
+        txt: 'Установка'
+      },
+      text: 'Сборка займет один день. Гарантия 3 года на наши собственные изделия.'
+    },
+
+  ]
+section.individual-design
+  .container
+    h2.section-title Индивидуальный дизайн
+    span.individual-design__subtitle Этапы работы
+    .individual-design__stages
+      each stage in stages
+        +stage-work(stage.number, stage.title, stage.text)
+

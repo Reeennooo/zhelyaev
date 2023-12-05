@@ -1,0 +1,152 @@
+.about-company {
+  position: relative;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  // !!!!!!!!!!!
+  // min-height: 724px;
+  // height: 100%;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 32px;
+    min-height: 644px;
+    height: 100%;
+  }
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-position: top;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__right,
+  &__left {
+    flex-grow: 1;
+  }
+
+  &__right {
+    display: grid;
+    align-self: flex-end;
+    grid-template-columns: repeat(2, minmax(auto, 316px));
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+  }
+}
+
+.about-card {
+  background-color: rgba(241, 241, 241, 0.7);
+  backdrop-filter: blur(13px);
+  border-radius: 4px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 316px;
+  width: 100%;
+  min-height: 180px;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 30px;
+    font-weight: bold;
+    color: $green;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--large {
+    max-width: 664px;
+    width: 100%;
+    min-height: 432px;
+
+    .about-card__title {
+      font-size: 66px;
+      line-height: 60px;
+      font-weight: bold;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: radial-gradient(116.31% 115.44% at 116.31% 52%, #9ad800 0%, #8bd000 14%, #65bb00 41%, #299a00 77%, #008400 100%);
+    }
+  }
+}
+
+@media (max-width: $desktop) {
+  .about-card {
+    &__text {
+      br:first-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .about-company {
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    &__left {
+      margin-bottom: 32px;
+    }
+
+    &__right {
+      grid-template-columns: repeat(2, minmax(auto, auto));
+    }
+  }
+
+  .about-card {
+    max-width: none;
+    &__text {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-big) {
+  .about-company {
+    padding: 32px 0;
+    &__left {
+      margin-bottom: 16px;
+    }
+
+    &__right {
+      grid-template-columns: repeat(2, minmax(auto, auto));
+      grid-row-gap: 16px;
+      grid-column-gap: 16px;
+    }
+  }
+
+  .about-card {
+    padding: 24px;
+    .about-card__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &__text {
+      br {
+        display: none;
+      }
+    }
+
+    &--large {
+      .about-card__title {
+        font-size: 46px;
+        line-height: 40px;
+      }
+    }
+  }
+}
