@@ -12,9 +12,6 @@
 
   &__logo {
     position: relative;
-    top: -5px;
-    width: 146px;
-    height: 40px;
     display: inline-block;
     margin-right: 68px;
     flex-shrink: 0;
@@ -106,7 +103,7 @@
     }
 
     .number {
-      color: $green;
+      color: $violet;
       font-weight: bold;
       font-size: 16px;
       line-height: 20px;
@@ -128,12 +125,12 @@
       @include transition('color');
 
       &.is-active {
-        color: $green;
+        color: $violet;
       }
 
       @media (hover: hover) {
         &:hover {
-          color: $green;
+          color: $violet;
         }
       }
     }

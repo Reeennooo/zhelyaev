@@ -2,55 +2,55 @@
   let rooms = [
     {
       link: '/catalog-second.html',
-      roomName: 'Кухня',
+      roomName: 'Верхняя одежда',
       specificNum: 28,
       cost: 32990,
       img: {
-        src: './img/rooms/kitchen.png',
-        alt: 'Мебель для кухни'
+        src: './img/categories/jacket.jpg',
+        alt: 'Одежда'
       },
       mod: ''
     },
     {
       link: '/catalog-second.html',
-      roomName: 'Гостиная',
+      roomName: 'Джинсы',
       specificNum: 28,
       cost: 19990,
       img: {
-        src: './img/rooms/living-room.png',
-        alt: 'Мебель для гостинной'
+        src: './img/categories/jeans.jpg',
+        alt: 'Одежда'
       },
       mod: ''
     },
     {
       link: '/catalog-second.html',
-      roomName: 'Спальня',
+      roomName: 'Худи',
       specificNum: 28,
       cost: 51790,
       img: {
-        src: './img/rooms/bedroom.png',
-        alt: 'Мебель для спальни'
+        src: './img/categories/hoodie.jpg',
+        alt: 'Одежда'
       },
       mod: ''
     },
     {
       link: '/catalog-second.html',
-      roomName: 'Прихожая',
+      roomName: 'Кроссовки',
       specificNum: 72,
       cost: 42810,
       img: {
-        src: './img/rooms/hallway.png',
-        alt: 'Мебель для прихожей'
+        src: './img/categories/sneakers.jpg',
+        alt: 'Одежда'
       },
       mod: 'large'
     },
     {
       link: '/catalog-second.html',
-      roomName: 'Офис',
+      roomName: 'Футболки',
       specificNum: 28,
       cost: 30100,
       img: {
-        src: './img/rooms/office.png',
+        src: './img/categories/t-shirt.jpg',
         alt: 'Мебель для офиса'
       },
       mod: ''
@@ -58,7 +58,7 @@
   ]
 section.rooms
  .container
-    h3.section-title Комнаты
+    h3.section-title Категории
     .rooms__grid
       each item in rooms
         if(item.mod === 'large')

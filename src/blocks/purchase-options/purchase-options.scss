@@ -5,10 +5,11 @@
 .purchase-options__ready {
   margin-bottom: 32px;
   .banner__cover {
-    width: 826px;
-    height: 672px;
-    right: -210px;
-    top: -150px;
+    width: 626px;
+    height: 472px;
+    right: 0;
+    top: 50px;
+    transform: rotate(45deg);
   }
 
   .banner__paragraph {

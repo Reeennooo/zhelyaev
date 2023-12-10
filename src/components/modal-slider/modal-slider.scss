@@ -80,7 +80,7 @@
   cursor: pointer;
 
   &.is-active {
-    border-color: $olive;
+    border-color: $violet-light;
   }
 
   img {
@@ -114,7 +114,7 @@
   @media (hover: hover) {
     &:hover {
       svg {
-        stroke: $olive;
+        stroke: $violet-light;
       }
     }
   }

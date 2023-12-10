@@ -1,16 +1,16 @@
 -
   let heroSlides = [
     {
-      title: 'Современные \nкухни для жизни',
-      subtitle: 'Проект мечты под заказ',
+      title: 'Современный \nдизайн',
+      subtitle: 'Полная уникальность',
       btntext: 'Оставить заявку',
       img: './img/hero-slider/slide1.jpg'
     },
     {
       title: 'Экологичные \nматериалы',
-      subtitle: 'Проект мечты под заказ',
+      subtitle: 'Твоя лучшая пара',
       btntext: 'Оставить заявку',
-      img: './img/hero-slider/slide1.jpg'
+      img: './img/hero-slider/slide2.jpg'
     },
   ]
 
@@ -19,7 +19,7 @@ section.hero
     .swiper-wrapper
       each slide in heroSlides 
         .swiper-slide.hero-slide
-          img(src=slide.img, alt="Современный интерьер")
+          img(src=slide.img, alt="Современный стиль")
           .hero-slide__info
             .hero-slide__text
               span.hero-slide__title=slide.title

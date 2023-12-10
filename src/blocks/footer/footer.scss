@@ -1,7 +1,7 @@
 .footer {
   padding-top: 87px;
   padding-bottom: 39px;
-  background-color: $background;
+  background-color: $white;
 
   &__wrapper {
     position: relative;
@@ -11,6 +11,7 @@
   }
 
   &__inner {
+    z-index: 2;
     flex-grow: 1;
     max-width: 919px;
   }
@@ -51,7 +52,7 @@
       @include transition(color);
       @media (hover: hover) {
         &:hover {
-          color: $green;
+          color: $violet;
         }
       }
     }
@@ -79,6 +80,8 @@
   &__license {
     position: relative;
     display: flex;
+    align-items: center;
+    column-gap: 20px;
     padding-top: 32px;
     margin-top: 32px;
 
@@ -107,13 +110,19 @@
   }
 
   &__img {
+    width: 450px;
     position: absolute;
-    right: 40px;
-    top: -47px;
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%);
     pointer-events: none;
     display: block;
     // margin-left: 40px;
     // transform: translateY(-47px);
+  }
+
+  .logo {
+    opacity: 0.3;
   }
 }
 

@@ -6,7 +6,7 @@ function init() {
     const myMap = new ymaps.Map(
         'yandex-map',
         {
-            center: [53.746785, 83.776856],
+            center: [47.222078, 39.720358],
             zoom: 6,
             controls: [],
         },
@@ -15,19 +15,14 @@ function init() {
 
     const OFFICES = [
         {
-            city: 'Барнаул',
-            coordinate: [53.337317, 83.678473],
-            addres: 'г. Барнаул, ул. Шумакова,\n д. 23а, офис 005, цокольный этаж',
+            city: 'Ростов-На-Дону',
+            coordinate: [47.22208, 39.720353],
+            addres: 'г. Ростов-На-Дону, ул. Пушкинская,\n д. 23а, офис 005, цокольный этаж',
         },
         {
-            city: 'Новосибирск',
-            coordinate: [55.030204, 82.92043],
-            addres: 'г. Новосибирск, ул. Шумакова,\n д. 23а, офис 005, цокольный этаж',
-        },
-        {
-            city: 'Новокузнецк',
-            coordinate: [53.75757, 87.136043],
-            addres: 'г. Новокузнецк, ул. Шумакова,\n д. 23а, офис 005, цокольный этаж',
+            city: 'Москва',
+            coordinate: [55.755864, 37.617698],
+            addres: 'г. Москва, ул. Пушкинская,\n д. 23а, офис 005, цокольный этаж',
         },
     ];
 
@@ -35,12 +30,12 @@ function init() {
         const officePoint = new ymaps.Placemark(
             coordinate,
             {
-                balloonContent: `<p class='ballon-title'>Офис</p> <p class='ballon-addres'>${addres}</p>`,
+                balloonContent: `<p class='ballon-title'>Магазин</p> <p class='ballon-addres'>${addres}</p>`,
             },
             {
                 // Стили для метки
                 iconLayout: 'default#image',
-                iconImageHref: '../img/yandex-map/map-pin-black.svg',
+                iconImageHref: '../img/yandex-map/map-pin.svg',
                 iconImageSize: [44, 44],
                 iconImageOffset: [-22, -44],
             }

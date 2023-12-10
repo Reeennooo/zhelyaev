@@ -1,44 +1,32 @@
 -
   const offices = [
     {
-      city: 'Барнаул',
-      addres: 'ул. Шумакова, д. 23а, офис 005, цокольный этаж',
-      number: '8 (800) 200-47-36',
+      city: 'Ростов',
+      addres: 'г. Ростов-На-Дону, ул. Пушкинская,\n д. 23а, офис 005',
+      number: '8 (800) 123-47-36',
       worktime: '9:00–17:00  ПН—ПТ'
     },
     {
-      city: 'Новосибирск',
-      addres: 'ул. Шумакова, д. 23а, офис 005, цокольный этаж',
-      number: '8 (800) 200-47-36',
+      city: 'Москва',
+      addres: 'г. Москва, ул. Пушкинская,\n д. 23а, офис 005',
+      number: '8 (800) 123-47-36',
       worktime: '9:00–17:00  ПН—ПТ'
     },
     {
-      city: 'Рубцовск',
-      addres: 'ул. Шумакова, д. 23а, офис 005, цокольный этаж',
-      number: '8 (800) 200-47-36',
+      city: 'Таганрог',
+      addres: 'г. Таганрог, ул. Пушкинская,\n д. 23а, офис 005',
+      number: '8 (800) 123-47-36',
       worktime: '9:00–17:00  ПН—ПТ'
     },
   ]
 section.our-offices
   .container
-    .section-title Наши офисы
+    .section-title Наши магазины
     .our-offices__wrapper
       each item in offices
         .office-info
           .office-info__city
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M40 16.9231C40 32.1538 22 44 22 44C22 44 4 32.1538 4 16.9231C4 12.4348 5.89642 8.13035 9.27208 4.95665C12.6477 1.78296 17.2261 0 22 0C26.7739 0 31.3523 1.78296 34.7279 4.95665C38.1036 8.13035 40 12.4348 40 16.9231Z" fill="url(#paint0_radial_519_9331)"/>
-              <path d="M32 26H12V12.6919L22.019 6L32 12.6919V26Z" fill="#F4F3F1"/>
-              <defs>
-              <radialGradient id="paint0_radial_519_9331" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(34.8399 8.56572) scale(32.9824 40.01)">
-              <stop stop-color="#9AD800"/>
-              <stop offset="0.14" stop-color="#8BD000"/>
-              <stop offset="0.41" stop-color="#65BB00"/>
-              <stop offset="0.77" stop-color="#299A00"/>
-              <stop offset="1" stop-color="#008400"/>
-              </radialGradient>
-              </defs>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(130, 0, 216, 1);transform: ;msFilter:;"><path d="M21.316 4.055C19.556 3.478 15 1.985 15 2a3 3 0 1 1-6 0c0-.015-4.556 1.478-6.317 2.055A.992.992 0 0 0 2 5.003v3.716a1 1 0 0 0 1.242.97L6 9v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9l2.758.689A1 1 0 0 0 22 8.719V5.003a.992.992 0 0 0-.684-.948z"></path></svg>
             span=item.city
           .office-info__addres=item.addres
           .office-info__contacts
@@ -51,5 +39,5 @@ section.our-offices
         <path d="M12.5 7.5V12.75" stroke="#FA8F21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12.5 17.25C13.1213 17.25 13.625 16.7463 13.625 16.125C13.625 15.5037 13.1213 15 12.5 15C11.8787 15 11.375 15.5037 11.375 16.125C11.375 16.7463 11.8787 17.25 12.5 17.25Z" fill="#FA8F21"/>
       </svg>
-      span Все встречи проводятся по предварительной записи
+      span Уточните о наличии товара по телефону
           

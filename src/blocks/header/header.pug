@@ -1,23 +1,23 @@
 -
     let categories = [
         {
-            text: 'Кухни',
+            text: 'Верхняя одежда',
             link: '#'
         },
         {
-            text: 'Прихожая',
+            text: 'Обувь',
             link: '#'
         },
         {
-            text: 'Гостиная',
+            text: 'Джинсы',
             link: '#'
         },
         {
-            text: 'Спальни',
+            text: 'Худи',
             link: '#'
         },
         {
-            text: 'Офисная мебель',
+            text: 'Футболки',
             link: '#'
         },
     ]
@@ -25,17 +25,18 @@
 header.header
     .container
         .header__top
-            a(href='index.html').header__logo
-                <img src='./img/logo.svg' alt='logo'>
+            a(href='index.html').header__logo.logo
+                | AllGoods
+                //- <img src='./img/logo.png' alt='logo'>
             .header__nav
                 .header__actions
                     a(href='catalog-first.html').header__link.is-active Каталог
-                    a(href='individual-design.html').header__link Под заказ
+                    //- a(href='individual-design.html').header__link Под заказ
                     +search()
                 .header__contacts
-                    .city(data-modal='modal-city') Барнаул
+                    .city(data-modal='modal-city') Ростов-на-Дону
                     a(href='/contacts.html').header__link  Контакты
-                    a(href='tel:+88003502237').number  8 800 350 22 37
+                    a(href='tel:+88003502237').number  8 800 123 45 67
         .header__categories
             each item in categories
                 a(href=item.link)=item.text

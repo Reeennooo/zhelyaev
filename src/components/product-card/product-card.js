@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // Клик по кнопке 'Отправить заявку'
+            // Клик по кнопке 'Сделать заказ'
             const BtnSendApplication = card.querySelector('.send-application');
             BtnSendApplication.addEventListener('click', () => fillApplicationModal(card));
         });
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     iterateProductCards(allCards);
 
     function fillApplicationModal(card) {
-        // Заполняем модалку 'Отправить заявку'
+        // Заполняем модалку 'Сделать заказ'
         const modalApplication = document.querySelector('.modal-application');
         const modalImg = modalApplication.querySelector('.application-info__img');
         const modalProductName = modalApplication.querySelector('.application-info__product-name');

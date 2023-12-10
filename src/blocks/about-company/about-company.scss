@@ -56,7 +56,7 @@
     font-size: 36px;
     line-height: 30px;
     font-weight: bold;
-    color: $green;
+    color: $violet;
   }
 
   &__text {
@@ -75,7 +75,7 @@
       font-weight: bold;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-image: radial-gradient(116.31% 115.44% at 116.31% 52%, #9ad800 0%, #8bd000 14%, #65bb00 41%, #299a00 77%, #008400 100%);
+      background-image: radial-gradient(116.31% 115.44% at 116.31% 52%, #8200d8 0%, rgb(82, 14, 150) 14%, rgb(101, 19, 183) 41%, rgb(106, 31, 180) 77%, rgb(67, 20, 115) 100%);
     }
   }
 }

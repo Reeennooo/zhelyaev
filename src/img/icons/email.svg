@@ -3,18 +3,18 @@
 <path d="M21 5.25L12 13.5L3 5.25" stroke="url(#paint1_radial_560_9634)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
 <radialGradient id="paint0_radial_560_9634" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.4199 7.87812) scale(16.4912 12.2758)">
-<stop stop-color="#9AD800"/>
-<stop offset="0.14" stop-color="#8BD000"/>
-<stop offset="0.41" stop-color="#65BB00"/>
-<stop offset="0.77" stop-color="#299A00"/>
-<stop offset="1" stop-color="#008400"/>
+<stop stop-color="#8200D8"/>
+<stop offset="0.14" stop-color="#8200D8"/>
+<stop offset="0.41" stop-color="#8200D8"/>
+<stop offset="0.77" stop-color="#8200D8"/>
+<stop offset="1" stop-color="#8200D8"/>
 </radialGradient>
 <radialGradient id="paint1_radial_560_9634" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.4199 6.85607) scale(16.4912 7.50187)">
-<stop stop-color="#9AD800"/>
-<stop offset="0.14" stop-color="#8BD000"/>
-<stop offset="0.41" stop-color="#65BB00"/>
-<stop offset="0.77" stop-color="#299A00"/>
-<stop offset="1" stop-color="#008400"/>
+<stop stop-color="#8200D8"/>
+<stop offset="0.14" stop-color="#8200D8"/>
+<stop offset="0.41" stop-color="#8200D8"/>
+<stop offset="0.77" stop-color="#8200D8"/>
+<stop offset="1" stop-color="#8200D8"/>
 </radialGradient>
 </defs>
 </svg>

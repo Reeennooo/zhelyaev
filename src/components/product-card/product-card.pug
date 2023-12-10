@@ -32,6 +32,6 @@ mixin product-card(name, cost, images, sizes)
             | Высота <br>
             span.product-card__size-value=sizes.height
             span.product-card__units &nbsp;см
-        +btn('Отправить заявку', '', 'small')(data-modal='modal-application').product-card__btn.send-application
-        +btn('Подробнее о товаре', '/product.html', 'small, transparent').product-card__btn
+        +btn('Сделать заказ', '', 'small')(data-modal='modal-application').product-card__btn.send-application
+        +btn('Добавить в корзину', '', 'small, transparent').product-card__btn
 //- a(href="/product.html" class='product-card__link')

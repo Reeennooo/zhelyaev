@@ -37,6 +37,7 @@
   }
 
   &__name {
+    margin-right: 5px;
     display: inline-block;
     font-weight: 500;
   }
@@ -52,12 +53,6 @@
     line-height: 17px;
     color: $grey-light;
     margin: 0 12px;
-  }
-
-  &__main {
-    padding-bottom: 32px;
-    margin-bottom: 32px;
-    border-bottom: 1px solid #e2e2e2;
   }
 
   &__scheme {

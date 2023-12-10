@@ -27,11 +27,11 @@
 
     &.is-active {
       span {
-        color: $green;
+        color: $violet;
       }
 
       svg {
-        stroke: $green;
+        stroke: $violet;
       }
     }
 
@@ -57,11 +57,11 @@
     @media (hover: hover) {
       &:hover {
         span {
-          color: $green;
+          color: $violet;
         }
 
         svg {
-          stroke: $green;
+          stroke: $violet;
         }
       }
     }
