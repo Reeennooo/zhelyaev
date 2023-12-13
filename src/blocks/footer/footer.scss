@@ -110,6 +110,7 @@
   }
 
   &__img {
+    opacity: 0.5;
     width: 450px;
     position: absolute;
     right: -70px;
@@ -123,6 +124,14 @@
 
   .logo {
     opacity: 0.3;
+  }
+}
+
+@media (max-width: $desktop-big) {
+  .footer {
+    &__img {
+      right: -150px;
+    }
   }
 }
 
@@ -244,12 +253,12 @@
     }
 
     &__img {
+      transform: translateY(0);
+      margin: 0 auto;
       position: relative;
       right: auto;
       top: auto;
       display: block;
-      width: 100%;
-      min-width: 401px;
       flex-shrink: 0;
     }
   }

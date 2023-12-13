@@ -149,3 +149,25 @@
   font-weight: 500;
   white-space: nowrap;
 }
+
+.basket-btn {
+  position: relative;
+
+  &__counter {
+    width: 20px;
+    height: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: $violet;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+
+    // txt
+    font-size: 10px;
+    font-weight: 500;
+    color: $white;
+  }
+}

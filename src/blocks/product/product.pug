@@ -1,4 +1,4 @@
-section.product(data-id='product-111' data-img='https://cdn.kanobu.ru/articles/pics/7b22cfa6-9aff-4dd1-9790-9680f01fc0e7.webp')
+section.product(data-id='1' data-img='./img/clothes/nike-1.png')
   .container.product__wrapper
     .product__info-wp
       +product-gallery()
@@ -11,7 +11,7 @@ section.product(data-id='product-111' data-img='https://cdn.kanobu.ru/articles/p
       .product-dashboard 
         span.product-dashboard__name Кроссовки Nike
         .product-dashboard__cost
-          span 28 070
+          span 4000
           | &nbsp;₽
         +btn('Сделать заказ', '#')(data-modal='modal-application').product-dashboard__send-request
         .product-dashboard__info
@@ -19,8 +19,8 @@ section.product(data-id='product-111' data-img='https://cdn.kanobu.ru/articles/p
             svg
               use(xlink:href="img/sprite.svg#clock")
             p 
-              | Срок изготовления - 
-              span.product-dashboard__making-time 60 дней
+              | Срок доставки - 
+              span.product-dashboard__making-time до 7 дней
           .product-dashboard__buttons
             button.info-button#characteristics
               .info-button__inner

@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //     console.log(inputValue);
         //     if (inputValue.length > 2) {
         //         try {
-        //             fetch('https://km-inteko.artu.studio/ajax/search.php', {
+        //             fetch('https://adress', {
         //                 method: 'POST',
         //                 headers: {
         //                     'Content-Type': 'application/json;charset=utf-8',

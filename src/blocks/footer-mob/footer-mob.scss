@@ -74,11 +74,3 @@
     display: block;
   }
 }
-
-@media (max-width: $mobile) {
-  .footer-mob {
-    &__container {
-      justify-content: space-between;
-    }
-  }
-}

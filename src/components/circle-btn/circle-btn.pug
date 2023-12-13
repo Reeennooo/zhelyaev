@@ -2,6 +2,10 @@ mixin circle-btn(icon, href)
   if(href)
     a(href=href).circle-btn&attributes(attributes)
       img(src=icon.src, alt=icon.alt)
+      if block
+        block
   else
     button.circle-btn&attributes(attributes)
       img(src=icon.src, alt=icon.alt)
+      if block
+        block

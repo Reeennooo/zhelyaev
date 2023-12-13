@@ -1,3 +1,5 @@
+import { BASKET } from '../../blocks/basket/basket';
+
 document.addEventListener('DOMContentLoaded', () => {
     const productGrid = document.querySelector('.catalog-second-level__grid');
     const allCards = document.querySelectorAll('.product-card');
@@ -19,6 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Клик по кнопке 'Сделать заказ'
             const BtnSendApplication = card.querySelector('.send-application');
             BtnSendApplication.addEventListener('click', () => fillApplicationModal(card));
+
+            // Клик по кнопке 'Добавить в корзину'
+            const BtnsAddToBasket = card.querySelectorAll('.add-to-basket');
+            BtnsAddToBasket.forEach((btn) =>
+                btn.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    addToBasket(card);
+                })
+            );
         });
     }
 
@@ -41,14 +52,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const modalProductCost = modalApplication.querySelector('.application-info__product-cost span');
         const modalProductId = modalApplication.querySelector('.for-id input');
 
-        const imgSrc = card.dataset.img;
+        const cardData = JSON.parse(card.dataset.product);
+
+        const imgSrc = cardData.img;
         const productName = card.querySelector('.product-card__name').innerHTML;
         const productCost = card.querySelector('.product-card__cost span').innerHTML;
-        const productId = card.dataset.id;
+        const productId = cardData.id;
 
         modalImg.setAttribute('src', `${imgSrc}`);
         modalProductName.innerHTML = productName;
         modalProductCost.innerHTML = productCost;
         modalProductId.value = productId;
+    }
+
+    function addToBasket(card) {
+        if (!BASKET.add(card.dataset.product)) return;
+        card.classList.add('basket-animation');
+        setTimeout(() => {
+            card.style.opacity = 0;
+            card.classList.remove('basket-animation');
+        }, 400);
+        setTimeout(() => {
+            card.style.opacity = 1;
+        }, 700);
     }
 });

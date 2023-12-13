@@ -2,23 +2,23 @@
     let categories = [
         {
             text: 'Верхняя одежда',
-            link: '#'
+            link: '/catalog-second.html'
         },
         {
             text: 'Обувь',
-            link: '#'
+            link: '/catalog-second.html'
         },
         {
             text: 'Джинсы',
-            link: '#'
+            link: '/catalog-second.html'
         },
         {
             text: 'Худи',
-            link: '#'
+            link: '/catalog-second.html'
         },
         {
             text: 'Футболки',
-            link: '#'
+            link: '/catalog-second.html'
         },
     ]
 
@@ -31,12 +31,12 @@ header.header
             .header__nav
                 .header__actions
                     a(href='catalog-first.html').header__link.is-active Каталог
-                    //- a(href='individual-design.html').header__link Под заказ
                     +search()
                 .header__contacts
-                    .city(data-modal='modal-city') Ростов-на-Дону
                     a(href='/contacts.html').header__link  Контакты
-                    a(href='tel:+88003502237').number  8 800 123 45 67
+                    .city(data-modal='modal-city') Ростов-на-Дону
+                    +circle-btn({src: './img/icons/basket.svg', alt: 'Корзина'}, '/basket.html').basket-btn
+                        .basket-btn__counter 2
         .header__categories
             each item in categories
                 a(href=item.link)=item.text

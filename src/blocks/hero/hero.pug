@@ -3,13 +3,13 @@
     {
       title: 'Современный \nдизайн',
       subtitle: 'Полная уникальность',
-      btntext: 'Оставить заявку',
+      btntext: 'Купить сейчас',
       img: './img/hero-slider/slide1.jpg'
     },
     {
       title: 'Экологичные \nматериалы',
       subtitle: 'Твоя лучшая пара',
-      btntext: 'Оставить заявку',
+      btntext: 'Купить сейчас',
       img: './img/hero-slider/slide2.jpg'
     },
   ]
@@ -24,7 +24,7 @@ section.hero
             .hero-slide__text
               span.hero-slide__title=slide.title
               span.hero-slide__subtitle=slide.subtitle
-            +btn(`${slide.btntext}`).hero-slide__btn
+            +btn(`${slide.btntext}`, '/catalog-second.html').hero-slide__btn
   button.hero__button-prev
     svg
       use(xlink:href="img/sprite.svg#caret-right")

@@ -1,0 +1,14 @@
+mixin basket-element(data)
+    .basket-element
+        .basket-element__info
+            img(src="img/clothes/nike-1.png", alt="" class='basket-element__image')
+            .basket-element__name Кроссовки Nike Air Force цвета капусты
+        .basket-element__right
+            .element-counter
+                +circle-btn({src: './img/icons/bx-minus.svg', alt: 'Plus'}).element-counter__minus
+                .element-counter__value 1
+                +circle-btn({src: './img/icons/bx-plus.svg', alt: 'Minus'}).element-counter__plus
+            .basket-element__price 5990 ₽
+            .basket-element__delete
+                svg
+                    use(href='img/sprite.svg#bx-trash')

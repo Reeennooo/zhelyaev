@@ -1,37 +1,24 @@
-mixin product-card(name, cost, images, sizes)
-  .product-card(data-id='tumba-112' data-img='https://cdn.kanobu.ru/articles/pics/7b22cfa6-9aff-4dd1-9790-9680f01fc0e7.webp')
+mixin product-card(data, images)
+  .product-card(data-id='tumba-112' data-img='https://cdn.kanobu.ru/articles/pics/7b22cfa6-9aff-4dd1-9790-9680f01fc0e7.webp' data-product=data)
     .product-card__wrapper
       a(href="/product.html").product-card__main-info
         .product-card__gallery
           each img, i in images
             .product-card__img
-              img(src=img, alt="Мебель inteko" loading="lazy" data-index=(i+1) class=`${(i === 0) ? 'is-active' : ''}`)
+              img(src=img, loading="lazy" data-index=(i+1) class=`${(i === 0) ? 'is-active' : ''}`)
           .product-card__nav
             each item, i in images
               .product-card__nav-el(data-index=(i+1) class=`${(i === 0) ? 'is-active' : ''}`)
           .product-card__tabs
             each item, i in images
               .product-card__tab(data-index=(i+1) class=`${(i === 0) ? 'is-active' : ''}`)
-        .product-card__name=name
+        .product-card__name=data.name
         .product-card__cost
-          span=cost 
+          span=data.price
           | &nbsp;₽
+          button.add-to-basket.add-to-basket--mobile
+            img(src='./img/icons/basket.svg', alt="Добавить в корзину")
       .product-card__hide
-        .product-card__sizes
-          .product-card__length.product-card__size-el
-            | Длина <br>
-            span.product-card__size-value=sizes.length
-            span.product-card__units &nbsp;см
-          span.multiply x
-          .product-card__width.product-card__size-el
-            | Ширина <br>
-            span.product-card__size-value=sizes.width
-            span.product-card__units &nbsp;см
-          span.multiply x
-          .product-card__height.product-card__size-el
-            | Высота <br>
-            span.product-card__size-value=sizes.height
-            span.product-card__units &nbsp;см
         +btn('Сделать заказ', '', 'small')(data-modal='modal-application').product-card__btn.send-application
-        +btn('Добавить в корзину', '', 'small, transparent').product-card__btn
+        +btn('Добавить в корзину', '', 'small, transparent').product-card__btn.add-to-basket
 //- a(href="/product.html" class='product-card__link')
