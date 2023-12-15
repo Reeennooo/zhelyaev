@@ -2,43 +2,43 @@
   const recommendCards = [
     {
       name: 'Худи Black',
-      src: '../img/recommendations/image1.png',
+      src: 'img/recommendations/image1.png',
       cost: 36990
     },
     {
       name: 'Джинсы Бананы',
-      src: '../img/recommendations/image2.png',
+      src: 'img/recommendations/image2.png',
       cost: 32990
     },
     {
       name: 'Куртка Stone Island',
-      src: '../img/recommendations/image3.png',
+      src: 'img/recommendations/image3.png',
       cost: 42990
     },
     {
       name: 'Куртка Stone Island',
-      src: '../img/recommendations/image3.png',
+      src: 'img/recommendations/image3.png',
       cost: 30990
     },
      {
       name: 'Куртка Stone Island',
-      src: '../img/recommendations/image3.png',
+      src: 'img/recommendations/image3.png',
       cost: 30990
     },
      {
       name: 'Куртка Stone Island',
-      src: '../img/recommendations/image3.png',
+      src: 'img/recommendations/image3.png',
       cost: 30990
     },
      {
       name: 'Куртка Stone Island',
-      src: '../img/recommendations/image3.png',
+      src: 'img/recommendations/image3.png',
       cost: 30990
     },
 
      {
       name: 'Куртка Stone Island',
-      src: '../img/recommendations/image3.png',
+      src: 'img/recommendations/image3.png',
       cost: 30990
     },
    
@@ -49,11 +49,13 @@ section.recommendation
       h3.recommendation__title Рекомендации
       .recommendation-navigation
         .recommendation-navigation__button-prev
-          svg
-            use(xlink:href='img/sprite.svg#caret-right')
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 15L55 40L30 65" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         .recommendation-navigation__button-next
-          svg
-            use(xlink:href='img/sprite.svg#caret-right')
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 15L55 40L30 65" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
     //- +recommendation-card(recommendCards[0])
     .swiper.recommendation-slider
       .swiper-wrapper

@@ -2,23 +2,23 @@
     let categories = [
         {
             text: 'Верхняя одежда',
-            link: '/catalog-second.html'
+            link: 'catalog-second.html'
         },
         {
             text: 'Обувь',
-            link: '/catalog-second.html'
+            link: 'catalog-second.html'
         },
         {
             text: 'Джинсы',
-            link: '/catalog-second.html'
+            link: 'catalog-second.html'
         },
         {
             text: 'Худи',
-            link: '/catalog-second.html'
+            link: 'catalog-second.html'
         },
         {
             text: 'Футболки',
-            link: '/catalog-second.html'
+            link: 'catalog-second.html'
         },
     ]
 
@@ -33,9 +33,9 @@ header.header
                     a(href='catalog-first.html').header__link.is-active Каталог
                     +search()
                 .header__contacts
-                    a(href='/contacts.html').header__link  Контакты
+                    a(href='contacts.html').header__link  Контакты
                     .city(data-modal='modal-city') Ростов-на-Дону
-                    +circle-btn({src: './img/icons/basket.svg', alt: 'Корзина'}, '/basket.html').basket-btn
+                    +circle-btn({src: './img/icons/basket.svg', alt: 'Корзина'}, 'basket.html').basket-btn
                         .basket-btn__counter 2
         .header__categories
             each item in categories
