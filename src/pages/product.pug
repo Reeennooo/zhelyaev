@@ -1,8 +1,9 @@
 extends ../pug/layout.pug
 
-//- block meta
-//-     title Карточка товара
-//-     meta(name='description', content='')
+block meta
+    - pageName = 'contacts'
+    title Карточка товара
+    meta(name='description', content='')
 
 //-block append head
    link(rel='stylesheet', href='css/some.css')
@@ -19,9 +20,8 @@ block content
 
 block prepend page-bottom
     +modal-slider()
-    +modal-city()
     +modal-application()
     +modal-delivery()
-    +modal-thanks()
+    //- +modal-thanks()
 block append page-bottom
   script(src='js/allow-sticky.js')

@@ -1,8 +1,11 @@
 extends ../pug/layout.pug
 
 block meta
-    title Корзина
-    meta(name='description', content='')
+  - pageName = 'basket'
+
+  title Корзина
+  meta(name='description', content='')
+    
 
 //-block append head
    link(rel='stylesheet', href='css/some.css')
@@ -17,7 +20,7 @@ block content
     
 
 block prepend page-bottom
-  +modal-city()
   +modal-application('basket')
+  +modal-delivery()
 //- block append page-bottom
 //-   script(src='js/allow-sticky.js')

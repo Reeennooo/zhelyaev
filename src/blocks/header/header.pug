@@ -33,8 +33,11 @@ header.header
                     a(href='catalog-first.html').header__link.is-active Каталог
                     +search()
                 .header__contacts
+                    if(pageName === 'main')
+                        .header__link.header__about-company  О компании
+                    if(pageName === 'basket')
+                        .header__link.header__about-company(data-modal='modal-delivery') Доставка товара
                     a(href='contacts.html').header__link  Контакты
-                    .city(data-modal='modal-city') Ростов-на-Дону
                     +circle-btn({src: './img/icons/basket.svg', alt: 'Корзина'}, 'basket.html').basket-btn
                         .basket-btn__counter 2
         .header__categories

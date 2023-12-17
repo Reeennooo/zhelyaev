@@ -13,7 +13,14 @@ section.product(data-id='1' data-img='./img/clothes/nike-1.png')
         .product-dashboard__cost
           span 4000
           | &nbsp;₽
-        +btn('Сделать заказ', '#')(data-modal='modal-application').product-dashboard__send-request
+        +btn('Добавить в корзину')(data-product={
+        id: 1,
+        name: 'Кроссовки Nike Air Force цвета капусты',
+        price: 4000,
+        amount: 1,
+        img: 'img/clothes/nike-1.png',
+      }).product-dashboard__send-request
+        .product-dashboard__message Товар добавлен в корзину
         .product-dashboard__info
           .product-dashboard__making
             svg

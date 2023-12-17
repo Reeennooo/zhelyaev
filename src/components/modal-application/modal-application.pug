@@ -16,5 +16,16 @@ mixin modal-application(type)
         +inputCustom('name', 'text', 'Имя').input-first
         +inputCustom('phone', 'tel', 'Телефон')
         +inputCustom('product_id', 'text').hidden.for-id
+        .payment-method
+          p Выберите способ оплаты:
+          .payment-method__wrapper
+            label(for='bank-card' class='payment-method-radio bank-card')
+              input(type='radio' name='payment-method' value='bank-card' id='bank-card' checked)
+              span Банковской картой
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zM4 6h16v2H4V6zm0 12v-6h16.001l.001 6H4z"/><path d="M6 14h6v2H6z"/></svg>
+            label(for='cash' class='payment-method-radio cash')
+              input(type='radio' name='payment-method' value='cash' id='cash')
+              span Наличными
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 4H3a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-1 11a3 3 0 0 0-3 3H7a3 3 0 0 0-3-3V9a3 3 0 0 0 3-3h10a3 3 0 0 0 3 3v6z"/><path d="M12 8c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4zm0 6c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z"/></svg>
         +btn('Сделать заказ').modal-application__button
 

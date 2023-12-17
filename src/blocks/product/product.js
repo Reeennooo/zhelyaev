@@ -1,4 +1,5 @@
 import Swiper, { Pagination } from 'swiper';
+import { BASKET } from '../basket/basket';
 import { openModal } from '../../components/modal/modal';
 Swiper.use([Pagination]);
 import { scrollTo } from '../../js/global-scripts';
@@ -78,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (productSection) {
+        document.querySelector('.wrapper').classList.add('sticky');
         function fillApplicationModal() {
             // Модальное окно заявки
             const modalApplication = document.querySelector('.modal-application');
@@ -113,6 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
         btnCharacterisic.addEventListener('click', () => scrollTo(characteristic));
 
         const BtnSendApplication = productSection.querySelector('.product-dashboard__send-request');
-        BtnSendApplication.addEventListener('click', fillApplicationModal);
+        BtnSendApplication.addEventListener('click', () => {
+            const message = productSection.querySelector('.product-dashboard__message');
+            BASKET.add(BtnSendApplication.dataset.product);
+            message.classList.add('is-active');
+            setTimeout(() => {
+                message.classList.remove('is-active');
+            }, 2000);
+        });
     }
 });

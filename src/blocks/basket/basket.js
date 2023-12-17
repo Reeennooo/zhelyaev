@@ -180,7 +180,7 @@ class ProductBasket {
 
     countTotalSum(changedProduct) {
         if (changedProduct) {
-            console.log(changedProduct);
+            // console.log(changedProduct);
             this.products = this.products.map((product) => {
                 if (product.id === changedProduct.id) {
                     return { ...product, totalCost: changedProduct.totalCost };

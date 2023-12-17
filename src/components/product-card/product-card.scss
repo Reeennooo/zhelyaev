@@ -96,15 +96,9 @@
       top: 0;
       left: 0;
       object-fit: cover;
-      opacity: 0;
 
-      visibility: hidden;
       pointer-events: none;
       @include transition('visibility, opacity');
-      &.is-active {
-        opacity: 1;
-        visibility: visible;
-      }
     }
   }
 

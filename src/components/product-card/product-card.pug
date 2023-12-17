@@ -3,15 +3,8 @@ mixin product-card(data, images)
     .product-card__wrapper
       a(href="product.html").product-card__main-info
         .product-card__gallery
-          each img, i in images
-            .product-card__img
-              img(src=img, loading="lazy" data-index=(i+1) class=`${(i === 0) ? 'is-active' : ''}`)
-          .product-card__nav
-            each item, i in images
-              .product-card__nav-el(data-index=(i+1) class=`${(i === 0) ? 'is-active' : ''}`)
-          .product-card__tabs
-            each item, i in images
-              .product-card__tab(data-index=(i+1) class=`${(i === 0) ? 'is-active' : ''}`)
+          .product-card__img
+            img(src=images[0], loading="lazy")
         .product-card__name=data.name
         .product-card__cost
           span=data.price
@@ -19,6 +12,5 @@ mixin product-card(data, images)
           button.add-to-basket.add-to-basket--mobile
             img(src='./img/icons/basket.svg', alt="Добавить в корзину")
       .product-card__hide
-        +btn('Сделать заказ', '', 'small')(data-modal='modal-application').product-card__btn.send-application
         +btn('Добавить в корзину', '', 'small, transparent').product-card__btn.add-to-basket
 //- a(href="/product.html" class='product-card__link')

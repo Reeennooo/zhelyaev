@@ -1,6 +1,7 @@
 extends ../pug/layout.pug
 
 block meta
+    - pageName = 'contacts'
     title Каталог
     meta(name='description', content='')
 
@@ -19,7 +20,7 @@ block content
     
 
 block prepend page-bottom
-    +modal-city()
+    
     +modal-application()
 block append page-bottom
   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

@@ -151,6 +151,7 @@
 }
 
 .basket-btn {
+  flex-shrink: 0;
   position: relative;
 
   &__counter {
@@ -169,5 +170,65 @@
     font-size: 10px;
     font-weight: 500;
     color: $white;
+  }
+}
+
+.payment-method {
+  margin-top: 20px;
+  p {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    column-gap: 12px;
+  }
+}
+
+.payment-method-radio {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  column-gap: 5px;
+  flex-grow: 1;
+  flex-basis: 0;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 5px;
+  align-items: center;
+
+  // txt
+  font-weight: 500;
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &:has(input:checked) {
+    border-color: $violet;
+  }
+
+  span {
+    text-align: center;
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.bank-card {
+  svg {
+    fill: $violet;
+  }
+}
+
+.cash {
+  svg {
+    fill: $green;
   }
 }

@@ -1,6 +1,7 @@
 extends ../pug/layout.pug
 
 block meta
+    - pageName = 'catalog-first'
     title Каталог
     meta(name='description', content='')
 
@@ -17,6 +18,6 @@ block content
     
 
 block prepend page-bottom
-    +modal-city()
+    
 //- block append page-bottom
 //-   script(src='js/some.js')

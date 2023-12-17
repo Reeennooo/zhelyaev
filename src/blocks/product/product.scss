@@ -38,7 +38,7 @@
   &__send-request {
     width: 100%;
     margin-top: 44px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   &__making {
@@ -73,6 +73,19 @@
       width: 1px;
       background-color: #f3f3f3;
       margin: 0 24px;
+    }
+  }
+
+  &__message {
+    @include transition(opacity);
+    color: $green;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+
+    &.is-active {
+      opacity: 1;
     }
   }
 }

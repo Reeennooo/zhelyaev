@@ -7,20 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function iterateProductCards(cards) {
         cards.forEach((card, i) => {
-            const navElements = card.querySelectorAll('.product-card__nav-el');
-            const images = card.querySelectorAll('img');
-            const tabs = card.querySelectorAll('.product-card__tab');
-            navElements.forEach((el) => {
-                el.addEventListener('mouseenter', () => {
-                    const index = el.dataset.index;
-                    images.forEach((img) => (index === img.dataset.index ? img.classList.add('is-active') : img.classList.remove('is-active')));
-                    tabs.forEach((tab) => (index === tab.dataset.index ? tab.classList.add('is-active') : tab.classList.remove('is-active')));
-                });
-            });
+            // const navElements = card.querySelectorAll('.product-card__nav-el');
+            // const images = card.querySelectorAll('img');
+            // const tabs = card.querySelectorAll('.product-card__tab');
+            // navElements.forEach((el) => {
+            //     el.addEventListener('mouseenter', () => {
+            //         const index = el.dataset.index;
+            //         images.forEach((img) => (index === img.dataset.index ? img.classList.add('is-active') : img.classList.remove('is-active')));
+            //         tabs.forEach((tab) => (index === tab.dataset.index ? tab.classList.add('is-active') : tab.classList.remove('is-active')));
+            //     });
+            // });
 
             // Клик по кнопке 'Сделать заказ'
-            const BtnSendApplication = card.querySelector('.send-application');
-            BtnSendApplication.addEventListener('click', () => fillApplicationModal(card));
+            // const BtnSendApplication = card.querySelector('.send-application');
+            // BtnSendApplication.addEventListener('click', () => fillApplicationModal(card));
 
             // Клик по кнопке 'Добавить в корзину'
             const BtnsAddToBasket = card.querySelectorAll('.add-to-basket');
@@ -44,26 +44,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     iterateProductCards(allCards);
 
-    function fillApplicationModal(card) {
-        // Заполняем модалку 'Сделать заказ'
-        const modalApplication = document.querySelector('.modal-application');
-        const modalImg = modalApplication.querySelector('.application-info__img');
-        const modalProductName = modalApplication.querySelector('.application-info__product-name');
-        const modalProductCost = modalApplication.querySelector('.application-info__product-cost span');
-        const modalProductId = modalApplication.querySelector('.for-id input');
+    // function fillApplicationModal(card) {
+    //     // Заполняем модалку 'Сделать заказ'
+    //     const modalApplication = document.querySelector('.modal-application');
+    //     const modalImg = modalApplication.querySelector('.application-info__img');
+    //     const modalProductName = modalApplication.querySelector('.application-info__product-name');
+    //     const modalProductCost = modalApplication.querySelector('.application-info__product-cost span');
+    //     const modalProductId = modalApplication.querySelector('.for-id input');
 
-        const cardData = JSON.parse(card.dataset.product);
+    //     const cardData = JSON.parse(card.dataset.product);
 
-        const imgSrc = cardData.img;
-        const productName = card.querySelector('.product-card__name').innerHTML;
-        const productCost = card.querySelector('.product-card__cost span').innerHTML;
-        const productId = cardData.id;
+    //     const imgSrc = cardData.img;
+    //     const productName = card.querySelector('.product-card__name').innerHTML;
+    //     const productCost = card.querySelector('.product-card__cost span').innerHTML;
+    //     const productId = cardData.id;
 
-        modalImg.setAttribute('src', `${imgSrc}`);
-        modalProductName.innerHTML = productName;
-        modalProductCost.innerHTML = productCost;
-        modalProductId.value = productId;
-    }
+    //     modalImg.setAttribute('src', `${imgSrc}`);
+    //     modalProductName.innerHTML = productName;
+    //     modalProductCost.innerHTML = productCost;
+    //     modalProductId.value = productId;
+    // }
 
     function addToBasket(card) {
         if (!BASKET.add(card.dataset.product)) return;
