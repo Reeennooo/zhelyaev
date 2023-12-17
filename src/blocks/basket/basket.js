@@ -1,3 +1,16 @@
+// html счётчика
+{
+    /* <div class='element-counter'>
+    <button class='circle-btn element-counter__minus ${amount <= 1 ? 'disabled' : ''}'>
+        <img src='./img/icons/bx-minus.svg' alt='Minus'>
+    </button>
+    <div class='element-counter__value'>${amount}</div>
+    <button class='circle-btn element-counter__plus'>
+        <img src='./img/icons/bx-plus.svg' alt='Plus'>
+    </button>
+</div> */
+}
+
 class Product {
     product;
     name = '';
@@ -14,15 +27,6 @@ class Product {
             <div class='basket-element__name'>${name}</div>
         </div>
         <div class='basket-element__right'>
-            <div class='element-counter'>
-                <button class='circle-btn element-counter__minus ${amount <= 1 ? 'disabled' : ''}'>
-                    <img src='./img/icons/bx-minus.svg' alt='Minus'>
-                </button>
-                <div class='element-counter__value'>${amount}</div>
-                <button class='circle-btn element-counter__plus'>
-                    <img src='./img/icons/bx-plus.svg' alt='Plus'>
-                </button>
-            </div>
             <div class='basket-element__price'>
                 <span class='value'>${totalCost}</span>&nbsp;₽
             </div>
@@ -52,7 +56,7 @@ class Product {
         });
         const removeBtn = this.product.querySelector('.basket-element__delete');
         removeBtn.addEventListener('click', () => BASKET.remove(this.id));
-        this._initCounter();
+        // this._initCounter();
     }
 
     createCounter() {
