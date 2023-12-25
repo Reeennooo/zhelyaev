@@ -15,22 +15,20 @@
   ]
 
 section.hero
-  .swiper.hero-slider
-    .swiper-wrapper
-      each slide in heroSlides 
-        .swiper-slide.hero-slide
-          img(src=slide.img, alt="Современный стиль")
-          .hero-slide__info
-            .hero-slide__text
-              span.hero-slide__title=slide.title
-              span.hero-slide__subtitle=slide.subtitle
-            +btn(`${slide.btntext}`, 'catalog-second.html').hero-slide__btn
-  button.hero__button-prev
-    svg
-      use(xlink:href="img/sprite.svg#caret-right")
-  button.hero__button-next
-    svg
-      use(xlink:href="img/sprite.svg#caret-right")
-  .hero-slider__pagination.slider-pagination
+  .hero-slider
+    .hero-slide
+      img(src='./img/hero-slider/slide1.jpg', alt="Современный стиль")
+      .hero-slide__info
+        .hero-slide__text
+          span.hero-slide__title='Современный \nдизайн'
+          span.hero-slide__subtitle='Полная уникальность'
+        +btn('Купить сейчас', 'catalog-second.html').hero-slide__btn
+  //- button.hero__button-prev
+  //-   svg
+  //-     use(xlink:href="img/sprite.svg#caret-right")
+  //- button.hero__button-next
+  //-   svg
+  //-     use(xlink:href="img/sprite.svg#caret-right")
+  //- .hero-slider__pagination.slider-pagination
 
     

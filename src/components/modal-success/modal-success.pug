@@ -1,9 +1,9 @@
 
 
 mixin modal-success()
-  +modal.modal-success
+  +modal().modal-success
     .modal-success__inner
-      .modal-success__title Ваша заявка успешно принята
-      .modal-success__icon
-        svg
-            use(href='img/sprite.svg#check')
+      img(src="img/icons/check-green.svg", alt="check-icon")
+      .modal-success__title Ваша заявка принята!
+      .modal-success__text  Мы свяжемся с вами в ближайшее время.
+      

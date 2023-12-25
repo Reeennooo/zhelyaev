@@ -1,4 +1,4 @@
-.furniture-types {
+.product-types {
   position: relative;
   margin-top: 44px;
   margin-bottom: 32px;
@@ -45,13 +45,13 @@
 }
 
 @media (max-width: $tablet) {
-  .furniture-types {
+  .product-types {
     margin-bottom: 22px;
   }
 }
 
 @media (max-width: $mobile-big) {
-  .furniture-types {
+  .product-types {
     padding-bottom: 22px;
 
     &::after {
@@ -95,7 +95,7 @@
 }
 
 @media (max-width: $mobile) {
-  .furniture-types {
+  .product-types {
     margin-top: 32px;
   }
 }

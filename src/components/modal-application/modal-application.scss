@@ -38,6 +38,26 @@
     max-width: 258px;
     width: 100%;
   }
+
+  &__error-message {
+    display: none;
+
+    margin-top: 20px;
+    // txt
+    font-weight: 500;
+    color: $color-error;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  .checkbox {
+    margin-top: 20px;
+    span {
+      font-weight: 500;
+    }
+  }
 }
 
 .application-info {

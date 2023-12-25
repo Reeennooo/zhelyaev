@@ -257,6 +257,12 @@
     .add-to-basket--mobile {
       display: inline-block;
     }
+
+    &.basket-animation {
+      .product-card__hide {
+        display: none;
+      }
+    }
   }
 }
 

@@ -155,26 +155,27 @@ class ProductBasket {
         return true;
     }
 
+    // Заменил id на строки!
     remove(productId) {
         this.products.forEach((el) => {
-            if (el.id === Number(productId)) {
+            if (el.id === productId) {
                 el.product.remove();
             }
         });
-        this.products = this.products.filter((el) => el.id !== Number(productId));
+        this.products = this.products.filter((el) => el.id !== productId);
         this.countTotalSum();
         this.setItemInLocalStorage();
         this._correctBasketCounter();
 
         if (!this.products.length) {
             this.basket.querySelector('#make-order').classList.add('disabled');
-            this.productWrapper?.insertAdjacentHTML('beforeend', '<div class="basket__empty">В корзине ничего нет :(</div>');
+            this.productWrapper?.insertAdjacentHTML('beforeend', '<div class="basket__empty">В корзине<br> ничего нет :(</div>');
         }
     }
 
     fillBasket() {
         if (!this.products.length) {
-            this.productWrapper?.insertAdjacentHTML('beforeend', '<div class="basket__empty">В корзине ничего нет :(</div>');
+            this.productWrapper?.insertAdjacentHTML('beforeend', '<div class="basket__empty">В корзине<br> ничего нет :(</div>');
         }
 
         this.products.forEach((item) => {

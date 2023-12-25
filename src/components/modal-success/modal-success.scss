@@ -1,0 +1,44 @@
+.modal-success {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+  &__title {
+    font-style: normal;
+    font-family: $additional-font;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: $mobile-big) {
+  .modal-success {
+    &__title {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-mixin inputCustom(name, type, placeholder)
+mixin inputCustom(name, type, placeholder, addClass)
   if (type === 'textarea')
     .input-custom&attributes(attributes)
       textarea(name=name, placeholder=placeholder)
@@ -12,4 +12,4 @@ mixin inputCustom(name, type, placeholder)
         | Прикрепить файл
   else
     .input-custom&attributes(attributes)
-      input(type=type, name=name, placeholder=placeholder)
+      input(type=type, name=name, placeholder=placeholder, class=addClass ? addClass : '')

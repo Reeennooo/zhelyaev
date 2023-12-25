@@ -20,6 +20,10 @@
   &__empty {
     font-size: 36px;
     font-weight: 500;
+
+    br {
+      display: none;
+    }
   }
 
   &__sum {
@@ -74,6 +78,13 @@
 
     &__sum {
       font-size: 16px;
+    }
+
+    &__empty {
+      text-align: center;
+      br {
+        display: block;
+      }
     }
   }
 }

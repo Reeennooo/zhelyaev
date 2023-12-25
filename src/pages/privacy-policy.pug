@@ -1,8 +1,8 @@
 extends ../pug/layout.pug
 
 block meta
-    - pageName = 'catalog-second'
-    title Каталог
+    - pageName = 'contacts'
+    title Политика конфиденциальности
     meta(name='description', content='')
 
 //-block append head
@@ -11,15 +11,12 @@ block meta
 //-block header
 
 block content
-    +breadcrumbs([{text: "Каталог"}])
-    include ../blocks/product-types/product-types
-    include ../blocks/catalog-second-level/catalog-second-level
+    +breadcrumbs([{text: "Политика конфиденцильности"}])
+    include ../blocks/privacy-policy/privacy-policy
     include ../blocks/footer-mob/footer-mob
 //- block footer
     
 
 block prepend page-bottom
-    
-    +modal-application()
 //- block append page-bottom
-//-   script(src='js/some.js')
+//-   script(src='js/')

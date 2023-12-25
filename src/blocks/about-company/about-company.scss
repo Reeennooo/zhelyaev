@@ -150,3 +150,19 @@
     }
   }
 }
+
+@media (max-width: $mobile) {
+  .about-card {
+    .about-card__title {
+      font-size: 26px;
+    }
+
+    &--large {
+      min-height: 350px;
+      .about-card__title {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+  }
+}

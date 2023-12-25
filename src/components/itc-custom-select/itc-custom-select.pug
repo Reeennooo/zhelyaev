@@ -1,10 +1,10 @@
 mixin itc-select()
   .itc-select#catalog-select&attributes(attributes)
-    button(type='button' data-select='toggle' name='furniture-filter' value='most-popular' data-index='0').itc-select__toggle 
-      | Самые популярные
+    button(type='button' data-select='toggle' name='products-filter' value='most-popular' data-index='0').itc-select__toggle 
+      | Отфильтровать
     .itc-select__dropdown
       ul.itc-select__options
-        li(class='itc-select__option itc-select__option_selected' data-select='option' data-value='most-popular' data-index='0') Самые популярные
+        //- li(class='itc-select__option itc-select__option_selected' data-select='option' data-value='most-popular' data-index='0') Самые популярные
         li(class='itc-select__option' data-select='option' data-value='low-cost' data-index='1') Самые дешевые
         li(class='itc-select__option' data-select='option' data-value='high-cost' data-index='2') Самые дорогие
       .itc-select__close(data-select="toggle")

@@ -1,0 +1,21 @@
+.privacy-policy {
+  margin-top: 44px;
+
+  .section-title {
+    hyphens: auto;
+  }
+
+  h4 {
+    margin: 20px 0;
+  }
+  p {
+    margin: 10px 0;
+  }
+
+  a {
+    color: $violet;
+    &:hover {
+      color: $grey-dark;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 extends ../pug/layout.pug
 
 block meta
-    - pageName = 'catalog-second'
-    title Каталог
+    - pageName = 'how-to-order'
+    title Как сделать заказ
     meta(name='description', content='')
 
 //-block append head
@@ -11,15 +11,12 @@ block meta
 //-block header
 
 block content
-    +breadcrumbs([{text: "Каталог"}])
-    include ../blocks/product-types/product-types
-    include ../blocks/catalog-second-level/catalog-second-level
+    +breadcrumbs([{text: "Как сделать заказ"}])
+    include ../blocks/how-to-order/how-to-order
     include ../blocks/footer-mob/footer-mob
 //- block footer
     
 
 block prepend page-bottom
-    
-    +modal-application()
 //- block append page-bottom
-//-   script(src='js/some.js')
+//-   script(src='js/')
